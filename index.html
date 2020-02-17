@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<!-- Hiya! Nice to see you here! -->
+
+<head>
+    <title>NitroGuy</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="NitroGuy's Website">
+    <meta name="author" content="NitroGuy/NitroGuy10/SassyMonkey">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+
+    <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <style>
+        body {
+            font-family: "Tomorrow", sans-serif;
+            color: #dddddd;
+            background-color: #121212;
+            margin: 0px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 150px;
+            background-color: #333333;
+            line-height: 180px;
+            margin: 0px;
+            padding-bottom: 20px;
+        }
+
+        p {
+            font-size: 30px;
+        }
+
+        button {
+            background-color: #252525;
+            border: none;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 40px;
+            font-family: "Tomorrow", sans-serif;
+            color: #bbbbbb;
+        }
+
+        a:link {
+            color: #1277CC;
+        }
+
+        a:visited {
+            color: #6633FF;
+        }
+
+        #email {
+            font-size: 12px;
+        }
+
+        #copyright {
+            padding-top: 15px;
+            padding-bottom: 3px;
+        }
+
+        #games {
+            text-align: center;
+        }
+
+        #random {
+            text-align: center;
+        }
+
+        #monkey {
+            padding-left: 30px;
+        }
+
+        iframe {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        button:hover {
+            background-color: #171717;
+        }
+
+        #content {
+            text-align: justify;
+            margin-left: 300px;
+            margin-right: 300px;
+        }
+
+        #content {
+            text-align: justify;
+            margin-left: 300px;
+            margin-right: 300px;
+        }
+    </style>
+
+    <script src="js/w3.js"></script>
+    <script>
+        const tabs = ["#about", "#music", "#games", "#random"]
+
+        function openTab(page, start) {
+            if (location.hash === tabs[page] && !start)
+            {
+                location.hash = "#about"
+                location.reload()
+                return
+            }
+            location.hash = tabs[page]
+            for (let i = 0; i < tabs.length; i++)
+            {
+                if (i === page)
+                {
+                    w3.show(tabs[i])
+                }
+                else
+                {
+                    w3.hide(tabs[i])
+                }
+
+            }
+        }
+
+        function start() {
+            if (location.hash === "" || tabs.indexOf(location.hash) === -1)
+            {
+                openTab(0, true)
+            }
+            else
+            {
+                openTab(tabs.indexOf(location.hash), true)
+            }
+        }
+
+
+    </script>
+
+</head>
+
+<body onload="start(); window.scrollTo(0, 0)">
+    <h1>NitroGuy</h1>
+    <p>
+        <button onclick="openTab(0)">About</button>
+        <button onclick="openTab(1)">Music</button>
+        <button onclick="openTab(2)">Games</button>
+        <button onclick="openTab(3)">Random</button>
+    </p>
+    <div id="content">
+        <div id="about">
+            <p>Hi there!</p>
+            <p>I'm NitroGuy. Currently, I am a human who lives on Earth. My hobbies include programming, building
+                circuits, playing video games, producing music, and sleeping.</p>
+            <p>I am highly interested in computer science and software development. At the moment, I am quite competent
+                with Java but reeeeally need to branch out more. I've dabbled in JavaScript as well as some game engine
+                scripting languages such as Unity-C# and Godot's GDScript. I've only had a little bit of experience with
+                building simple circuits to manipulate with microcontrollers but I'm already in love.</p>
+            <p>Video games have been a massive part of my life but I find myself playing them less and less due to lack
+                of time. Some of my all-time favorites are Rollercoaster Tycoon 2, Minecraft (of course), Factorio, and
+                Team Fortress 2. As of the time of writing this, I am currently playing a lot of osu! and Overwatch.</p>
+            <p>I am chronically addicted to music. I love playing, producing, and listening to music. I've loved a
+                variety of genres over the years but, right now, I am most fixated on Dubstep and EDM.</p>
+        </div>
+        <div id="music">
+            <img src="icons/sm.png" id="monkey" align="right">
+            <p>I produce EDM under the alias "SassyMonkey".</p>
+            <p>My portfolio is pretty garbage at the moment but, trust me, I have some cool stuff in the works lol</p>
+            <p>If you wanna have a listen, check me out on <a
+                    href="https://www.youtube.com/channel/UCoJpTVMgEBnrF0KzaRZlklQ">YouTube</a> and <a
+                    href="https://soundcloud.com/nitroguy10">SoundCloud</a></p>
+        </div>
+        <div id="games">
+            <p>These games are kinda bad.</p>
+            <p>Don't waste your time playing 'em.</p>
+            <br>
+            <p>CalcGames</p>
+            <a href="https://nitroguy10.github.io/CalcGames/"><img src="gif/serpent.gif" alt="Serpent"
+                    style="max-width:322px" /><img src="gif/matrix.gif" alt="Matrix Racer"
+                    style="max-width:322px" /></a>
+            <p>Dodge3</p>
+            <a href="https://nitroguy10.github.io/Dodge3/"><img src="gif/dodge3.gif" alt="Dodge3"
+                    style="max-width:496px" /></a>
+            <p>Jumpy</p>
+            <a href="https://nitroguy10.github.io/Jumpy/"><img src="gif/jumpy.gif" alt="Jumpy"
+                    style="max-width:496px" /></a>
+            <p>Smiley (This one especially sucks)</p>
+            <a href="https://nitroguy10.github.io/Smiley/"><img src="gif/smiley.gif" alt="Smiley"
+                    style="max-width:514px" /></a>
+        </div>
+        <div id="random">
+            <p><a href="https://nitroguy10.github.io/ResistorTool/">ResistorTool</a></p>
+            <p><a href="pages/roboplato.html">Neural Network Trained on Plato's Works</a></p>
+            <p><a href="https://nitroguy10.github.io/ClickType/">ClickType</a></p>
+        </div>
+    </div>
+    <footer>
+        <a href="https://www.youtube.com/channel/UCoJpTVMgEBnrF0KzaRZlklQ"><img src="icons/youtube_social_icon_red2.png"
+                height="32px" width="32px" title="YouTube" alt="YouTube"></a>
+        <a href="https://soundcloud.com/nitroguy10"><img src="icons/orange_transparent_32-94fc761.png" height="32px"
+                width="32px" title="SoundCloud" alt="SoundCloud"></a>
+        <a href="https://github.com/NitroGuy10"><img src="icons/GitHub-Mark-Light-120px-plus2.png" height="32px"
+                width="32px" title="GitHub" alt="GitHub"></a>
+        <a href="https://twitter.com/NitroGuy10"><img src="icons/Twitter_Logo_Blue.png" height="32px" width="32px"
+                title="Twitter" alt="Twitter"></a>
+        <div id="email" title="E-Mail">nitroguysm(at)gmail.com</div>
+    </footer>
+    <footer id="copyright">© 2020 NitroGuy</footer>
+</body>
+
+</html>

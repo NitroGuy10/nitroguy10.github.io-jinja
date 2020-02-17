@@ -1,2 +1,1 @@
-# nitroguy10.github.io
-My Website
+# My Website
