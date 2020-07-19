@@ -176,7 +176,7 @@
             for (let info of songData[0]) {
                 let song = document.createElement("TR")
                 song.className = "songInfo"
-                song.id = info.name.toLowerCase().replaceAll(" ", "_").replaceAll("(", "").replaceAll(")", "")
+                song.id = replaceAll(info.name.toLowerCase(), [" ", "_", "(", "", ")", ""])
 
                 let songDesc1 = document.createElement("TD")
                 songDesc1.id = "songDesc1"
@@ -193,7 +193,7 @@
                 let coverP = document.createElement("P")
                 coverP.id = "cover"
                 let coverLinksTo = document.createElement("A")
-                coverLinksTo.href = "../links_to.html#" + info.name.toLowerCase().replaceAll(" ", "_").replaceAll("(", "").replaceAll(")", "")
+                coverLinksTo.href = "../links_to.html#" + replaceAll(info.name.toLowerCase(), [" ", "_", "(", "", ")", ""])
                 let cover = document.createElement("IMG")
                 cover.className = "coverimg"
                 cover.src = "../icons/" + info.coverLink

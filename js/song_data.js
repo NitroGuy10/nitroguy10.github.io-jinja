@@ -421,7 +421,7 @@ const songsByName = new Map()
 
 for (let i = 0; i < songData.length; i++) {
     for (let song of songData[i]) {
-        songsByName.set(song.name.toLowerCase().replaceAll("(", "").replaceAll(")", ""), song)
+        songsByName.set(replaceAll(song.name.toLowerCase(), ["(", "", ")", ""]), song)
     }
 }
 
@@ -434,4 +434,16 @@ for (let i = 0; i < songData.length; i++) {
     for (let song of songData[i]) {
         collectionBySongName.set(song.name.toLowerCase(), collectionNames[i])
     }
+}
+
+
+
+
+function replaceAll(string, replacePairs)
+{
+    for (let i = 0; i < replacePairs.length / 2; i += 2)
+    {
+        string = string.split(replacePairs[i]).join(replacePairs[i + 1])
+    }
+    return string
 }

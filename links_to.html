@@ -212,7 +212,7 @@
 
     <script src="js/song_data.js"></script>
     <script>
-        let hash = location.hash.substring(1).replaceAll("_", " ")
+        let hash = replaceAll(location.hash.substring(1), ["_", " "])
         let info = songsByName.get(hash)
         // ofc add a message if the song does not exist
 
@@ -258,7 +258,7 @@
                 collection.innerHTML = "Collection: "
                 let collectionLink = document.createElement("A")
                 collectionLink.innerHTML = collectionBySongName.get(info.name.toLowerCase())
-                collectionLink.href = ["pages/", collectionBySongName.get(info.name.toLowerCase()).toLowerCase().replaceAll(" ", "_"), ".html"].join("")
+                collectionLink.href = ["pages/", collectionBySongName.get(replaceAll(info.name.toLowerCase(), [" ", "_"])), ".html"].join("")
                 collection.appendChild(collectionLink)
                 songDesc2.appendChild(collection)
             }
