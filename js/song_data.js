@@ -382,7 +382,7 @@ songData[1][0] = {
     wavLink: "https://drive.google.com/file/d/1AVXTkWQkvyOB3pb8q49zWNlA99ICCfo_/view?usp=sharing",
     itLink: null,
     midiLink: null,
-    youtubeLink: null,
+    youtubeLink: "https://youtu.be/_nC0nNW-6Qg",
     soundcloudLink: "https://soundcloud.com/nitroguy10/candy-fractals"
 }
 
@@ -396,7 +396,7 @@ songData[1][1] = {
     wavLink: "https://drive.google.com/file/d/1YTGspoHUSz2fCSSigo2xI_GVtM6UbhAZ/view?usp=sharing",
     itLink: null,
     midiLink: null,
-    youtubeLink: null,
+    youtubeLink: "https://youtu.be/ushAx6Bljwk",
     soundcloudLink: "https://soundcloud.com/nitroguy10/soaring"
 }
 
@@ -410,7 +410,7 @@ songData[1][2] = {
     wavLink: "https://drive.google.com/file/d/1qClCC8uMwINCPVyv6_C8IDg-c1ay9Y3i/view?usp=sharing",
     itLink: null,
     midiLink: null,
-    youtubeLink: null,
+    youtubeLink: "https://youtu.be/SSRHiM3Tujo",
     soundcloudLink: "https://soundcloud.com/nitroguy10/endless-ft-vishnu"
 }
 
