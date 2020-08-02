@@ -258,7 +258,7 @@
                 collection.innerHTML = "Collection: "
                 let collectionLink = document.createElement("A")
                 collectionLink.innerHTML = collectionBySongName.get(info.name.toLowerCase())
-                collectionLink.href = ["pages/", collectionBySongName.get(replaceAll(info.name.toLowerCase(), [" ", "_"])), ".html"].join("")
+                collectionLink.href = ["pages/", replaceAll(collectionBySongName.get(info.name.toLowerCase()).toLowerCase(), [" ", "_"]), ".html"].join("")
                 collection.appendChild(collectionLink)
                 songDesc2.appendChild(collection)
             }

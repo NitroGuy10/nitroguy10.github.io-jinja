@@ -441,7 +441,7 @@ for (let i = 0; i < songData.length; i++) {
 
 function replaceAll(string, replacePairs)
 {
-    for (let i = 0; i < replacePairs.length / 2; i += 2)
+    for (let i = 0; i < replacePairs.length; i += 2)
     {
         string = string.split(replacePairs[i]).join(replacePairs[i + 1])
     }
