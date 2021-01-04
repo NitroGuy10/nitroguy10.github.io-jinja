@@ -146,29 +146,37 @@
     <script>
         const tabs = ["#about", "#music", "#games", "#random"]
 
-        function openTab(page, start) {
-            if (location.hash === tabs[page] && !start) {
+        function openTab(page, start)
+        {
+            if (location.hash === tabs[page] && !start)
+            {
                 /*location.hash = "#about"
                 location.reload()*/
                 return
             }
             location.hash = tabs[page]
-            for (let i = 0; i < tabs.length; i++) {
-                if (i === page) {
+            for (let i = 0; i < tabs.length; i++)
+            {
+                if (i === page)
+                {
                     w3.show(tabs[i])
                 }
-                else {
+                else
+                {
                     w3.hide(tabs[i])
                 }
 
             }
         }
 
-        function start() {
-            if (location.hash === "" || tabs.indexOf(location.hash) === -1) {
+        function start()
+        {
+            if (location.hash === "" || tabs.indexOf(location.hash) === -1)
+            {
                 openTab(0, true)
             }
-            else {
+            else
+            {
                 openTab(tabs.indexOf(location.hash), true)
             }
         }
@@ -192,17 +200,19 @@
                 <h2 class="noscript_heading">About</h2>
             </noscript>
             <p>Hi there!</p>
-            <p>I'm NitroGuy. Currently, I am a human who lives on Earth. My hobbies include programming, building
-                circuits, playing video games, producing music, and sleeping.</p>
-            <p>I am highly interested in computer science and software development. At the moment, I am quite competent
+            <p>I'm NitroGuy. Currently, I am a human who lives on Earth. My hobbies include programming, producing music, playing video games, and sleeping.</p>
+            <p>I am highly interested in computer science and software development. Recently, I've been working a lot
+                with Processing and making cool graphical things&mdash;something I've never really done before. I am
+                quite competent
                 with Java but reeeeally need to branch out more. I've dabbled in JavaScript as well as some game engine
                 scripting languages such as Unity-C# and Godot's GDScript. I've only had a little bit of experience with
                 building simple circuits to manipulate with microcontrollers but I'm already in love.</p>
             <p>Video games have been a massive part of my life but I find myself playing them less and less due to lack
                 of time. Some of my all-time favorites are Rollercoaster Tycoon 2, Minecraft (of course), Factorio,
-                Terraria, Team Fortress 2, and Black Mesa. As of the time of writing this, I am currently playing a lot of Overwatch.</p>
+                Terraria, Team Fortress 2, Black Mesa, and Undertale. As of the time of writing this, I am currently playing a lot
+                of osu! and Overwatch.</p>
             <p>I am chronically addicted to music. I love playing, producing, and listening to music. I've loved a
-                variety of genres over the years but, right now, I am most fixated on Dubstep and EDM.</p>
+                variety of genres over the years but, right now, I am most fixated on Dubstep and EDM in general.</p>
         </div>
         <noscript>
             <hr class="noscript_hr"></noscript>
@@ -210,7 +220,7 @@
             <noscript>
                 <h2 class="noscript_heading">Music</h2>
             </noscript>
-            <img src="icons/sm.png" id="monkey" align="right">
+            <img src="icons/sass_tiny.png" id="monkey" align="right">
             <p>I produce EDM under the alias "The Sass".</p>
             <p>If you wanna have a listen, check me out on <a
                     href="https://www.youtube.com/channel/UCoJpTVMgEBnrF0KzaRZlklQ">YouTube</a> and <a
@@ -268,7 +278,7 @@
                 title="Twitter" alt="Twitter"></a>
         <div id="email" title="E-Mail">nitroguysm(at)gmail.com</div>
     </footer>
-    <footer id="copyright">© 2020 NitroGuy</footer>
+    <footer id="copyright">© 2021 NitroGuy</footer>
 </body>
 
 </html>
