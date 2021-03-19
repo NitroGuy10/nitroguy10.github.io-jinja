@@ -6,7 +6,7 @@
     <title>NitroGuy</title>
 
     <meta charset="UTF-8">
-    <meta name="description" content="Candy Fractals EP">
+    <meta name="description" content="Jump">
     <meta name="author" content="NitroGuy/NitroGuy10/The Sass">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -173,16 +173,18 @@
         // The song name should be in all lower case with underscores instead of spaces
 
         function populate() {
-            for (let info of songData[1]) {
+            for (let info of songData[2]) {
                 let song = document.createElement("TR")
                 song.className = "songInfo"
                 song.id = replaceAll(info.name.toLowerCase(), [" ", "_", "(", "", ")", ""])
 
                 let songDesc1 = document.createElement("TD")
                 songDesc1.id = "songDesc1"
-                let songTitle = document.createElement("STRONG")
+
+                /* let songTitle = document.createElement("STRONG")
                 songTitle.innerHTML = info.name
-                songDesc1.appendChild(songTitle)
+                songDesc1.appendChild(songTitle) */
+
                 let songDescription = document.createElement("P")
                 songDescription.innerHTML = info.description
                 songDesc1.appendChild(songDescription)
@@ -255,14 +257,7 @@
         <button onclick="window.location.href = '../index.html#music'">Back to Site</button>
     </p>
     <div id="content">
-        <h2>Candy Fractals EP</h2>
-        <div id="about">
-            <p>My first ever EP and my first ever dive into the kinds of genres I've been listening to lately (mostly
-                Dubstep lol). You can definitely expect more songs in this style in the future! This EP is a turning
-                point for my production. Even if no one ever listens to it, I'm still so glad I made it!</p>
-            <p>The artwork for this EP was done by a good friend of mine. Doesn't it look sick? It's certainly leagues
-                better than my old cover artwork!</p>
-        </div>
+        <h2>Jump</h2>
         <noscript>
             <hr>
             <p>Darn.</p>

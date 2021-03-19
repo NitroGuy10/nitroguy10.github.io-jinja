@@ -1,6 +1,6 @@
-const collectionNames = ["Older Tracks", "Candy Fractals EP"]
+const collectionNames = ["Older Tracks", "Candy Fractals EP", "Jump", "Neddie - Figment (The Sass Remix)"]
 
-const isSingle = [false]
+const isSingle = [false, false, true, true]
 
 const fieldNames = {
     name: "Name",
@@ -31,7 +31,7 @@ songData[0][0] = {
     itLink: null,
     midiLink: null,
     youtubeLink: "https://youtu.be/uqHb9nARYSI",
-    soundcloudLink: "https://soundcloud.com/nitroguy10/freedom"
+    soundcloudLink: "https://soundcloud.com/the-sass-music/freedom"
 }
 
 songData[0][1] = {
@@ -45,21 +45,21 @@ songData[0][1] = {
     itLink: null,
     midiLink: null,
     youtubeLink: "https://youtu.be/wO0uL6QBKt4",
-    soundcloudLink: "https://soundcloud.com/nitroguy10/party-on-the-gangplank"
+    soundcloudLink: "https://soundcloud.com/the-sass-music/party-on-the-gangplank"
 }
 
 songData[0][2] = {
     name: "Ultimate",
     description: "I'm not really that into hardstyle but I got my hands on a hardstyle kick sample and decided to try it out. I didn't try very hard to adhere to the typical characteristics hardstyle (nor do I really know what they are lol) but I think the final product ended up sounding pretty fun.",
     releaseDate: "7 October 2018",
-    genre: "Melodic Hardstyle",
+    genre: "Hardstyle",
     coverLink: "Ultimate.png",
     mp3Link: "https://drive.google.com/open?id=1RtQKFjcSEQFYf1CHeEVC2IxN_8igvJZA",
     wavLink: "https://drive.google.com/open?id=11jjakxKEZifKs7QB0CGLjz97R2J9omRe",
     itLink: null,
     midiLink: null,
     youtubeLink: "https://youtu.be/Lozz1q2zquA",
-    soundcloudLink: "https://soundcloud.com/nitroguy10/ultimate"
+    soundcloudLink: "https://soundcloud.com/the-sass-music/ultimate"
 }
 
 songData[0][3] = {
@@ -73,7 +73,7 @@ songData[0][3] = {
     itLink: null,
     midiLink: null,
     youtubeLink: "https://youtu.be/bdsqBfUzd2g",
-    soundcloudLink: "https://soundcloud.com/nitroguy10/sunshine"
+    soundcloudLink: "https://soundcloud.com/the-sass-music/sunshine"
 }
 
 songData[0][4] = {
@@ -87,7 +87,7 @@ songData[0][4] = {
     itLink: null,
     midiLink: null,
     youtubeLink: "https://youtu.be/sy4EhOiL68E",
-    soundcloudLink: "https://soundcloud.com/nitroguy10/pursuit"
+    soundcloudLink: "https://soundcloud.com/the-sass-music/pursuit"
 }
 
 songData[0][5] = {
@@ -101,7 +101,7 @@ songData[0][5] = {
     itLink: null,
     midiLink: null,
     youtubeLink: "https://youtu.be/O0nDPindE00",
-    soundcloudLink: "https://soundcloud.com/nitroguy10/friendship"
+    soundcloudLink: "https://soundcloud.com/the-sass-music/friendship"
 }
 
 songData[0][6] = {
@@ -115,7 +115,7 @@ songData[0][6] = {
     itLink: null,
     midiLink: null,
     youtubeLink: "https://youtu.be/SV-asdeXD5Y",
-    soundcloudLink: "https://soundcloud.com/nitroguy10/dominate"
+    soundcloudLink: "https://soundcloud.com/the-sass-music/dominate"
 }
 
 songData[0][7] = {
@@ -129,7 +129,7 @@ songData[0][7] = {
     itLink: null,
     midiLink: null,
     youtubeLink: "https://youtu.be/EWJSzLHwxCk",
-    soundcloudLink: "https://soundcloud.com/nitroguy10/awaken"
+    soundcloudLink: "https://soundcloud.com/the-sass-music/awaken"
 }
 
 songData[0][8] = {
@@ -143,7 +143,7 @@ songData[0][8] = {
     itLink: "https://drive.google.com/open?id=1hsSkxegz-jOCOPPLLZNYcz49E8YbRFri",
     midiLink: null,
     youtubeLink: "https://youtu.be/TfN1lxy59Xo",
-    soundcloudLink: "https://soundcloud.com/nitroguy10/nightsky-v1"
+    soundcloudLink: "https://soundcloud.com/the-sass-music/nightsky-v1"
 }
 
 songData[0][9] = {
@@ -157,7 +157,7 @@ songData[0][9] = {
     itLink: null,
     midiLink: null,
     youtubeLink: "https://youtu.be/V_Sk2__LbVg",
-    soundcloudLink: "https://soundcloud.com/nitroguy10/nightlight"
+    soundcloudLink: "https://soundcloud.com/the-sass-music/nightlight"
 }
 
 songData[0][10] = {
@@ -171,7 +171,7 @@ songData[0][10] = {
     itLink: null,
     midiLink: null,
     youtubeLink: "https://youtu.be/Zp5yFigGqZo",
-    soundcloudLink: "https://soundcloud.com/nitroguy10/bon-voyage"
+    soundcloudLink: "https://soundcloud.com/the-sass-music/bon-voyage"
 }
 
 songData[0][11] = {
@@ -185,7 +185,7 @@ songData[0][11] = {
     itLink: null,
     midiLink: null,
     youtubeLink: "https://youtu.be/EKku-2eJpsg",
-    soundcloudLink: "https://soundcloud.com/nitroguy10/celestial"
+    soundcloudLink: "https://soundcloud.com/the-sass-music/celestial"
 }
 
 songData[0][12] = {
@@ -199,7 +199,7 @@ songData[0][12] = {
     itLink: null,
     midiLink: null,
     youtubeLink: "https://youtu.be/Ns8lGUKpv64",
-    soundcloudLink: "https://soundcloud.com/nitroguy10/fury"
+    soundcloudLink: "https://soundcloud.com/the-sass-music/fury"
 }
 
 songData[0][13] = {
@@ -213,7 +213,7 @@ songData[0][13] = {
     itLink: null,
     midiLink: null,
     youtubeLink: "https://youtu.be/gQCrMQ-g3iw",
-    soundcloudLink: "https://soundcloud.com/nitroguy10/shiny"
+    soundcloudLink: "https://soundcloud.com/the-sass-music/shiny"
 }
 
 songData[0][14] = {
@@ -227,7 +227,7 @@ songData[0][14] = {
     itLink: null,
     midiLink: null,
     youtubeLink: null,
-    soundcloudLink: "https://soundcloud.com/nitroguy10/dodge3-theme"
+    soundcloudLink: "https://soundcloud.com/the-sass-music/dodge3-theme"
 }
 
 songData[0][15] = {
@@ -241,7 +241,7 @@ songData[0][15] = {
     itLink: null,
     midiLink: null,
     youtubeLink: "https://youtu.be/EWJSzLHwxCk",
-    soundcloudLink: "https://soundcloud.com/nitroguy10/sawtooth"
+    soundcloudLink: "https://soundcloud.com/the-sass-music/sawtooth"
 }
 
 songData[0][16] = {
@@ -255,7 +255,7 @@ songData[0][16] = {
     itLink: null,
     midiLink: null,
     youtubeLink: null,
-    soundcloudLink: "https://soundcloud.com/nitroguy10/the-count"
+    soundcloudLink: "https://soundcloud.com/the-sass-music/the-count"
 }
 
 songData[0][17] = {
@@ -269,7 +269,7 @@ songData[0][17] = {
     itLink: "https://drive.google.com/open?id=1jj9Nd1mIb7NDrWTvjbhybksnowSwpDRU",
     midiLink: null,
     youtubeLink: "https://youtu.be/6JIvZaZh4iA",
-    soundcloudLink: "https://soundcloud.com/nitroguy10/danceit"
+    soundcloudLink: "https://soundcloud.com/the-sass-music/danceit"
 }
 
 songData[0][18] = {
@@ -283,7 +283,7 @@ songData[0][18] = {
     itLink: null,
     midiLink: null,
     youtubeLink: "https://youtu.be/OTDKtJq-WnU",
-    soundcloudLink: "https://soundcloud.com/nitroguy10/onto-the-battlefield"
+    soundcloudLink: "https://soundcloud.com/the-sass-music/onto-the-battlefield"
 }
 
 songData[0][19] = {
@@ -297,7 +297,7 @@ songData[0][19] = {
     itLink: null,
     midiLink: null,
     youtubeLink: "https://youtu.be/E3EKM6W4PPw",
-    soundcloudLink: "https://soundcloud.com/nitroguy10/hurricane"
+    soundcloudLink: "https://soundcloud.com/the-sass-music/hurricane"
 }
 
 songData[0][20] = {
@@ -311,7 +311,7 @@ songData[0][20] = {
     itLink: null,
     midiLink: "https://drive.google.com/open?id=1rmc2H9EzF_5SQkXCNoGKm9JHseiZhNBj",
     youtubeLink: null,
-    soundcloudLink: "https://soundcloud.com/nitroguy10/overdrive-midi"
+    soundcloudLink: "https://soundcloud.com/the-sass-music/overdrive-midi"
 }
 
 songData[0][21] = {
@@ -325,7 +325,7 @@ songData[0][21] = {
     itLink: null,
     midiLink: null,
     youtubeLink: "https://youtu.be/8RImovwi3Qo",
-    soundcloudLink: "https://soundcloud.com/nitroguy10/overdrive"
+    soundcloudLink: "https://soundcloud.com/the-sass-music/overdrive"
 }
 
 songData[0][22] = {
@@ -339,7 +339,7 @@ songData[0][22] = {
     itLink: null,
     midiLink: null,
     youtubeLink: "https://youtu.be/2ETnfOrO3cc",
-    soundcloudLink: "https://soundcloud.com/nitroguy10/spring-in-your-step"
+    soundcloudLink: "https://soundcloud.com/the-sass-music/spring-in-your-step"
 }
 
 songData[0][23] = {
@@ -353,7 +353,7 @@ songData[0][23] = {
     itLink: null,
     midiLink: null,
     youtubeLink: "https://youtu.be/gWN_rcKLWRY",
-    soundcloudLink: "https://soundcloud.com/nitroguy10/rough-waters"
+    soundcloudLink: "https://soundcloud.com/the-sass-music/rough-waters"
 }
 
 songData[0][24] = {
@@ -367,7 +367,7 @@ songData[0][24] = {
     itLink: null,
     midiLink: null,
     youtubeLink: "https://youtu.be/K-7OgM7RcPI",
-    soundcloudLink: "https://soundcloud.com/nitroguy10/the-challenge-ahead"
+    soundcloudLink: "https://soundcloud.com/the-sass-music/the-challenge-ahead"
 }
 
 songData[1] = []
@@ -383,7 +383,7 @@ songData[1][0] = {
     itLink: null,
     midiLink: null,
     youtubeLink: "https://youtu.be/_nC0nNW-6Qg",
-    soundcloudLink: "https://soundcloud.com/nitroguy10/candy-fractals"
+    soundcloudLink: "https://soundcloud.com/the-sass-music/candy-fractals"
 }
 
 songData[1][1] = {
@@ -397,7 +397,7 @@ songData[1][1] = {
     itLink: null,
     midiLink: null,
     youtubeLink: "https://youtu.be/ushAx6Bljwk",
-    soundcloudLink: "https://soundcloud.com/nitroguy10/soaring"
+    soundcloudLink: "https://soundcloud.com/the-sass-music/soaring"
 }
 
 songData[1][2] = {
@@ -411,27 +411,62 @@ songData[1][2] = {
     itLink: null,
     midiLink: null,
     youtubeLink: "https://youtu.be/SSRHiM3Tujo",
-    soundcloudLink: "https://soundcloud.com/nitroguy10/endless-ft-vishnu"
+    soundcloudLink: "https://soundcloud.com/the-sass-music/endless-ft-vishnu"
 }
 
+songData[2] = []
 
+songData[2][0] = {
+    name: "Jump",
+    description: "My first proper growly Brostep track. This was super fun to make and I sat on it for nearly a YEAR before finally calling it done and releasing it. More music theory than sound design in this one but I think that's gonna be a trend in my music... at least for a while.",
+    releaseDate: "5 March 2021",
+    genre: "Dubstep",
+    coverLink: "Jump.png",
+    mp3Link: "https://drive.google.com/file/d/1ERQg6GqDAtpX4E9nc6AEpdICyIM71NBU/view?usp=sharing",
+    wavLink: "https://drive.google.com/file/d/1xVNQlv46hiih_XZbNfhaNsOpJ9YgXxqk/view?usp=sharing",
+    itLink: null,
+    midiLink: null,
+    youtubeLink: null,
+    soundcloudLink: "https://soundcloud.com/the-sass-music/jump"
+}
+
+songData[3] = []
+
+songData[3][0] = {
+    name: "Neddie - Figment (The Sass Remix)",
+    description: "A cinematic melodic dubstep remix of Neddie - Figment for his Figment Remix Contest. Definitely my most polished and well-constructed track yet. I think my production is improving O_o. This one actually placed first! I'm so grateful for all the support I've gotten from this tune! You guys are the best <3",
+    releaseDate: "8 March 2021",
+    genre: "Melodic Dubstep",
+    coverLink: "Figment_Remix.png",
+    mp3Link: "https://drive.google.com/file/d/1JMOu1NaaLvtRoC0an9Q1i7XkC9I7ZJ2u/view?usp=sharing",
+    wavLink: "https://drive.google.com/file/d/1XA71_iXlzOJupow4zOLq8z-vHhjqgLlj/view?usp=sharing",
+    itLink: null,
+    midiLink: null,
+    youtubeLink: null,
+    soundcloudLink: "https://soundcloud.com/the-sass-music/neddie-figment-the-sass-remix"
+}
 
 
 const songsByName = new Map()
 
-for (let i = 0; i < songData.length; i++) {
-    for (let song of songData[i]) {
+for (let i = 0; i < songData.length; i++)
+{
+    for (let song of songData[i])
+    {
         songsByName.set(replaceAll(song.name.toLowerCase(), ["(", "", ")", ""]), song)
     }
 }
 
 const collectionBySongName = new Map()
 
-for (let i = 0; i < songData.length; i++) {
-    if (isSingle[i]) {
+for (let i = 0; i < songData.length; i++)
+{
+    if (isSingle[i])
+    {
         continue
     }
-    for (let song of songData[i]) {
+    for (let song of songData[i])
+    {
         collectionBySongName.set(song.name.toLowerCase(), collectionNames[i])
     }
 }
