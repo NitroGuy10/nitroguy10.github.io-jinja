@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<!-- Hiya! Nice to see you here! -->
+
+<head>
+    <title>NitroGuy</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Jump">
+    <meta name="author" content="NitroGuy/NitroGuy10/The Sass">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/site.webmanifest">
+
+    <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <style>
+        body {
+            font-family: "Tomorrow", sans-serif;
+            color: #dddddd;
+            background-color: #121212;
+            margin: 0px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 150px;
+            background-color: #333333;
+            line-height: 180px;
+            margin: 0px;
+            padding-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 75px;
+        }
+
+        h3 {
+            font-size: 15px;
+            text-align: left;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        p {
+            font-size: 30px;
+        }
+
+        td {
+            font-size: 30px;
+            vertical-align: top;
+            border-top: 1px solid #444444;
+            padding-top: 30px;
+        }
+
+        li {
+            font-size: 30px;
+        }
+
+        button {
+            background-color: #252525;
+            border: none;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 40px;
+            font-family: "Tomorrow", sans-serif;
+            color: #bbbbbb;
+        }
+
+        a:link {
+            color: #1277CC;
+        }
+
+        a:visited {
+            color: #5544FF;
+        }
+
+        a.download:link,
+        a.download:visited {
+            color: #00aaff;
+        }
+
+        #email {
+            font-size: 12px;
+        }
+
+        #copyright {
+            padding-top: 15px;
+            padding-bottom: 3px;
+        }
+
+        #games {
+            text-align: center;
+        }
+
+        #random {
+            text-align: center;
+        }
+
+        #monkey {
+            padding-left: 30px;
+        }
+
+        #songDesc1 {
+            padding-right: 15px;
+        }
+
+        #cover {
+            margin-bottom: 0px;
+        }
+
+        iframe {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        button:hover {
+            background-color: #171717;
+        }
+
+        #content {
+            text-align: justify;
+            /* margin-left: 300px;
+            margin-right: 300px; */
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+
+        @media only screen and (max-width: 1030px) {
+            h1 {
+                font-size: 14vw;
+                line-height: 22vw;
+            }
+
+            h2 {
+                font-size: 10vw;
+                line-height: 10vw;
+            }
+
+            p {
+                font-size: 4vw;
+            }
+
+            button {
+                font-size: 5vw;
+                padding: 1vw;
+            }
+
+            .gamesgif {
+                width: 98%
+            }
+
+            #content {
+                margin-left: 5%;
+                margin-right: 5%;
+                text-align: left;
+            }
+        }
+    </style>
+
+    <script src="../js/song_data.js"></script>
+    <script>
+
+        // Remember that you can set the hash in order to automatically scroll to a song
+        // The song name should be in all lower case with underscores instead of spaces
+
+        function populate() {
+            for (let info of songData[2]) {
+                let song = document.createElement("TR")
+                song.className = "songInfo"
+                song.id = replaceAll(info.name.toLowerCase(), [" ", "_", "(", "", ")", ""])
+
+                let songDesc1 = document.createElement("TD")
+                songDesc1.id = "songDesc1"
+
+                /* let songTitle = document.createElement("STRONG")
+                songTitle.innerHTML = info.name
+                songDesc1.appendChild(songTitle) */
+
+                let songDescription = document.createElement("P")
+                songDescription.innerHTML = info.description
+                songDesc1.appendChild(songDescription)
+                song.appendChild(songDesc1)
+
+                let songDesc2 = document.createElement("TD")
+                songDesc2.id = "songDesc2"
+                let coverP = document.createElement("P")
+                coverP.id = "cover"
+                let coverLinksTo = document.createElement("A")
+                coverLinksTo.href = "../links_to.html#" + replaceAll(info.name.toLowerCase(), [" ", "_", "(", "", ")", ""])
+                let cover = document.createElement("IMG")
+                cover.className = "coverimg"
+                cover.src = "../icons/" + info.coverLink
+                cover.width = "250"
+                cover.height = "250"
+                coverLinksTo.appendChild(cover)
+                coverP.appendChild(coverLinksTo)
+                songDesc2.appendChild(coverP)
+                let date = document.createElement("H3")
+                date.innerHTML = "Released: " + info.releaseDate
+                songDesc2.appendChild(date)
+                let genre = document.createElement("H3")
+                genre.innerHTML = "Genre: " + info.genre
+                songDesc2.appendChild(genre)
+                let download = document.createElement("H3")
+                let mp3Link = document.createElement("A")
+                mp3Link.href = info.mp3Link
+                mp3Link.className = "download"
+                mp3Link.target = "_blank"
+                mp3Link.innerHTML = "(mp3)"
+                download.appendChild(mp3Link)
+                download.innerHTML += " "
+                let wavLink = document.createElement("A")
+                wavLink.href = info.wavLink
+                wavLink.className = "download"
+                wavLink.target = "_blank"
+                wavLink.innerHTML = "(wav)"
+                download.appendChild(wavLink)
+                if (info.itLink !== null) {
+                    download.innerHTML += " "
+                    let itLink = document.createElement("A")
+                    itLink.href = info.itLink
+                    itLink.className = "download"
+                    itLink.target = "_blank"
+                    itLink.innerHTML = "(it)"
+                    download.appendChild(itLink)
+                }
+                if (info.midiLink !== null) {
+                    download.innerHTML += " "
+                    let midiLink = document.createElement("A")
+                    midiLink.href = info.midiLink
+                    midiLink.className = "download"
+                    midiLink.target = "_blank"
+                    midiLink.innerHTML = "(midi)"
+                    download.appendChild(midiLink)
+                }
+                songDesc2.appendChild(download)
+                song.appendChild(songDesc2)
+
+                document.getElementById("songList").appendChild(song)
+            }
+        }
+    </script>
+</head>
+
+<body onload="populate()">
+    <h1>The Sass</h1>
+    <p>
+        <button onclick="window.location.href = '../index.html#music'">Back to Site</button>
+    </p>
+    <div id="content">
+        <h2>Jump</h2>
+        <noscript>
+            <hr>
+            <p>Darn.</p>
+            <p>It looks like JavaScript is disabled in your browser :(</p>
+            <p>I use JavaScript to do some of the heavy lifting for me and to keep my song information consistant across
+                all pages.</p>
+            <p>If you REALLY need to read about or download my music and enabling JavaScript is not an option, you can
+                finagle your way through <a href="../js/song_data.js">the .js file</a> and try to find what you need.
+                (Ctrl+F might help)</p>
+        </noscript>
+        <div id="eachTrack">
+            <table id="songList">
+            </table>
+        </div>
+    </div>
+    <footer>
+        <a href="https://www.youtube.com/channel/UCoJpTVMgEBnrF0KzaRZlklQ"><img
+                src="../icons/youtube_social_icon_red2.png" height="32px" width="32px" title="YouTube"
+                alt="YouTube"></a>
+        <a href="https://soundcloud.com/the-sass-music"><img src="../icons/orange_transparent_32-94fc761.png" height="32px"
+                width="32px" title="SoundCloud" alt="SoundCloud"></a>
+        <a href="https://github.com/NitroGuy10"><img src="../icons/GitHub-Mark-Light-120px-plus2.png" height="32px"
+                width="32px" title="GitHub" alt="GitHub"></a>
+        <a href="https://twitter.com/NitroGuy10"><img src="../icons/Twitter_Logo_Blue.png" height="32px" width="32px"
+                title="Twitter" alt="Twitter"></a>
+        <div id="email" title="E-Mail">nitroguysm(at)gmail.com</div>
+    </footer>
+    <footer id="copyright">© 2021 NitroGuy</footer>
+</body>
+
+</html>

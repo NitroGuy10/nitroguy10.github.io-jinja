@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<!-- Hiya! Nice to see you here! -->
+
+<head>
+    <title>NitroGuy</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="The Sass's Older Tracks">
+    <meta name="author" content="NitroGuy/NitroGuy10/The Sass">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+
+    <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <style>
+        body {
+            font-family: "Tomorrow", sans-serif;
+            color: #dddddd;
+            background-color: #121212;
+            margin: 0px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 150px;
+            background-color: #333333;
+            line-height: 180px;
+            margin: 0px;
+            padding-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 75px;
+        }
+
+        h3 {
+            font-size: 15px;
+            text-align: left;
+        }
+
+        h4 {
+            font-size: 70px;
+            text-align: left;
+            margin: 0px;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 30px;
+            border-collapse: collapse;
+            background-color: #222222;
+            border-style: solid;
+            border-color: #000000;
+            box-shadow: 2px 2px 10px 2px #000000;
+
+        }
+
+        p {
+            font-size: 30px;
+        }
+
+        td {
+            font-size: 30px;
+            vertical-align: top;
+            border-top: 1px solid #444444;
+            padding: 12px;
+        }
+
+        td#songDesc1,
+        td#songDesc2 {
+            border-top: none;
+        }
+
+        .download {
+            font-size: 30px;
+            line-height: 10px;
+        }
+
+        .downloadLinks {
+            font-size: 20px;
+        }
+
+        .otherLinks {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        li {
+            font-size: 30px;
+        }
+
+        button {
+            background-color: #252525;
+            border: none;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 40px;
+            font-family: "Tomorrow", sans-serif;
+            color: #bbbbbb;
+        }
+
+        .mainSite {
+            font-size: 36px;
+        }
+
+        a:link {
+            color: #1277CC;
+        }
+
+        a:visited {
+            color: #5544FF;
+        }
+
+        a.download:link,
+        a.download:visited {
+            color: #00aaff;
+        }
+
+        #whoops {
+            text-align: left;
+        }
+
+        #email {
+            font-size: 12px;
+        }
+
+        #copyright {
+            padding-top: 15px;
+            padding-bottom: 3px;
+        }
+
+        #games {
+            text-align: center;
+        }
+
+        #random {
+            text-align: center;
+        }
+
+        #monkey {
+            padding-left: 30px;
+        }
+
+        #songDesc1 {
+            padding-right: 15px;
+        }
+
+        #cover {
+            margin-bottom: 0px;
+        }
+
+        iframe {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        button:hover {
+            background-color: #171717;
+        }
+
+        #content {
+            text-align: justify;
+            /* margin-left: 300px;
+            margin-right: 300px; */
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+
+        @media only screen and (max-width: 1030px) {
+            h1 {
+                font-size: 14vw;
+                line-height: 22vw;
+            }
+
+            h2 {
+                font-size: 10vw;
+                line-height: 10vw;
+            }
+
+            h4 {
+                font-size: 10vw;
+                line-height: 10vw;
+            }
+
+            p {
+                font-size: 4vw;
+            }
+
+            button {
+                font-size: 5vw;
+                padding: 1vw;
+            }
+
+            .gamesgif {
+                width: 98%
+            }
+
+            #content {
+                margin-left: 5%;
+                margin-right: 5%;
+                text-align: left;
+            }
+        }
+    </style>
+
+    <script src="js/song_data.js"></script>
+    <script>
+        let hash = replaceAll(location.hash.substring(1), ["_", " "])
+        let info = songsByName.get(hash)
+        // ofc add a message if the song does not exist
+
+        function populate() {
+            if (info == null) {
+                let whoops = document.createElement("P")
+                whoops.id = "whoops"
+                whoops.innerHTML = "O_o Whoops! It looks like the song you were searching for is not here! Did you spell it incorrectly? Check the URL \"hash\" and make sure it is correct. (e.g. .../links_to.html#freedom or .../links_to.html#onto_the_battlefield)"
+                document.getElementById("songList").appendChild(whoops)
+                return;
+            }
+            let song = document.createElement("TR")
+            song.className = "songInfo"
+
+            let songDesc1 = document.createElement("TD")
+            songDesc1.id = "songDesc1"
+            let songTitle = document.createElement("H4")
+            songTitle.innerHTML = info.name
+            songDesc1.appendChild(songTitle)
+            let songDescription = document.createElement("P")
+            songDescription.innerHTML = info.description
+            songDesc1.appendChild(songDescription)
+            song.appendChild(songDesc1)
+
+            let songDesc2 = document.createElement("TD")
+            songDesc2.id = "songDesc2"
+            let coverP = document.createElement("P")
+            coverP.id = "cover"
+            let cover = document.createElement("IMG")
+            cover.src = "icons/" + info.coverLink
+            cover.width = "250"
+            cover.height = "250"
+            coverP.appendChild(cover)
+            songDesc2.appendChild(coverP)
+            let date = document.createElement("H3")
+            date.innerHTML = "Released: " + info.releaseDate
+            songDesc2.appendChild(date)
+            let genre = document.createElement("H3")
+            genre.innerHTML = "Genre: " + info.genre
+            songDesc2.appendChild(genre)
+            if (collectionBySongName.has(info.name.toLowerCase())) {
+                let collection = document.createElement("H3")
+                collection.innerHTML = "Collection: "
+                let collectionLink = document.createElement("A")
+                collectionLink.innerHTML = collectionBySongName.get(info.name.toLowerCase())
+                collectionLink.href = ["pages/", replaceAll(collectionBySongName.get(info.name.toLowerCase()).toLowerCase(), [" ", "_"]), ".html"].join("")
+                collection.appendChild(collectionLink)
+                songDesc2.appendChild(collection)
+            }
+
+            songDesc2.appendChild(document.createElement("HR"))
+            let download = document.createElement("H3")
+            download.innerHTML = "Free Download: "
+            download.className = "download"
+            let downloadLinks = document.createElement("P")
+            let mp3Link = document.createElement("A")
+            mp3Link.href = info.mp3Link
+            mp3Link.className = "downloadLinks"
+            mp3Link.target = "_blank"
+            mp3Link.innerHTML = "(mp3)"
+            downloadLinks.appendChild(mp3Link)
+            downloadLinks.innerHTML += " "
+            let wavLink = document.createElement("A")
+            wavLink.href = info.wavLink
+            wavLink.className = "downloadLinks"
+            wavLink.target = "_blank"
+            wavLink.innerHTML = "(wav)"
+            downloadLinks.appendChild(wavLink)
+            if (info.itLink !== null) {
+                downloadLinks.innerHTML += " "
+                let itLink = document.createElement("A")
+                itLink.href = info.itLink
+                itLink.className = "downloadLinks"
+                itLink.target = "_blank"
+                itLink.innerHTML = "(it)"
+                downloadLinks.appendChild(itLink)
+            }
+            if (info.midiLink !== null) {
+                downloadLinks.innerHTML += " "
+                let midiLink = document.createElement("A")
+                midiLink.href = info.midiLink
+                midiLink.className = "downloadLinks"
+                midiLink.target = "_blank"
+                midiLink.innerHTML = "(midi)"
+                downloadLinks.appendChild(midiLink)
+            }
+            download.appendChild(downloadLinks)
+            songDesc2.appendChild(download)
+
+            songDesc2.appendChild(document.createElement("HR"))
+            let otherLinks = document.createElement("H3")
+            if (info.youtubeLink !== null) {
+                let ytParagraph = document.createElement("P")
+                ytParagraph.className = "otherLinks"
+                let ytLink = document.createElement("A")
+                let ytIcon = document.createElement("IMG")
+                ytIcon.src = "icons/youtube_social_icon_red2.png"
+                ytIcon.height = 32
+                ytIcon.width = 32
+                ytParagraph.appendChild(ytIcon)
+                ytLink.href = info.youtubeLink
+                ytLink.className = "otherLinks"
+                ytLink.target = "_blank"
+                ytLink.innerHTML = "YouTube"
+                ytParagraph.appendChild(ytLink)
+                otherLinks.appendChild(ytParagraph)
+            }
+            if (info.soundcloudLink !== null) {
+                let scParagraph = document.createElement("P")
+                scParagraph.className = "otherLinks"
+                let scLink = document.createElement("A")
+                let scIcon = document.createElement("IMG")
+                scIcon.src = "icons/orange_transparent_32-94fc761.png"
+                scIcon.height = 32
+                scIcon.width = 32
+                scParagraph.appendChild(scIcon)
+                scLink.href = info.soundcloudLink
+                scLink.className = "otherLinks"
+                scLink.target = "_blank"
+                scLink.innerHTML = "SoundCloud"
+                scParagraph.appendChild(scLink)
+                otherLinks.appendChild(scParagraph)
+            }
+            songDesc2.appendChild(otherLinks)
+
+
+
+            song.appendChild(songDesc2)
+
+            document.getElementById("songList").appendChild(song)
+        }
+    </script>
+</head>
+
+<body onload="populate()" onhashchange="location.reload()">
+    <h1>The Sass</h1>
+    <div id="content">
+        <noscript>
+            <p>Darn.</p>
+            <p>It looks like JavaScript is disabled in your browser :(</p>
+            <p>I use JavaScript to do some of the heavy lifting for me and to keep my song information consistant across
+                all pages.</p>
+            <p>If you REALLY need to read about or download my music and enabling JavaScript is not an option, you can
+                finagle your way through <a href="../js/song_data.js">the .js file</a> and try to find what you need.
+                (Ctrl+F might help)</p>
+        </noscript>
+        <div id="eachTrack">
+            <table id="songList">
+
+            </table>
+        </div>
+    </div>
+    <br>
+    <br>
+    <footer>
+        <a class="mainSite" href="index.html#music">Main Site</a>
+    </footer>
+    <footer>
+        <a href="https://www.youtube.com/channel/UCoJpTVMgEBnrF0KzaRZlklQ"><img src="icons/youtube_social_icon_red2.png"
+                height="32px" width="32px" title="YouTube" alt="YouTube"></a>
+        <a href="https://soundcloud.com/the-sass-music"><img src="icons/orange_transparent_32-94fc761.png" height="32px"
+                width="32px" title="SoundCloud" alt="SoundCloud"></a>
+        <a href="https://github.com/NitroGuy10"><img src="icons/GitHub-Mark-Light-120px-plus2.png" height="32px"
+                width="32px" title="GitHub" alt="GitHub"></a>
+        <a href="https://twitter.com/NitroGuy10"><img src="icons/Twitter_Logo_Blue.png" height="32px" width="32px"
+                title="Twitter" alt="Twitter"></a>
+        <div id="email" title="E-Mail">nitroguysm(at)gmail.com</div>
+    </footer>
+    <footer id="copyright">© 2021 NitroGuy</footer>
+</body>
+
+</html>

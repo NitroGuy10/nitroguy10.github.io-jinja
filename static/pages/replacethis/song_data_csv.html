@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<!-- Hiya! Nice to see you here! -->
+
+<head>
+    <title>NitroGuy</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+
+    <style>
+        button {
+            font-size: 1vw;
+            padding: 1vw;
+        }
+    </style>
+    <script src="../js/FileSaver.js"></script>
+    <script src="../js/song_data.js"></script>
+    <script>
+        const content = ["Collection"]
+        const fileName = "the_sass_song_data.csv"
+
+        for (let field in fieldNames)
+        {
+            content.push(",")
+            content.push(fieldNames[field])
+        }
+
+        for (let i = 0; i < songData.length; i++)
+        {
+            for (let song of songData[i])
+            {
+                content.push("\n")
+                content.push(collectionNames[i])
+                for (let field in fieldNames)
+                {
+                    content.push(",")
+                    content.push(song[field])
+                }
+            }
+        }
+
+        const blob = new Blob([content.join("")], {
+            type: "text/csv;charset=utf-8"
+        })
+
+        saveAs(blob, fileName)
+    </script>
+</head>
+
+<body>
+    <button onclick="saveAs(blob, fileName)">Click here if download does not automatically start</button>
+</body>
+
+</html>
