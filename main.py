@@ -1,32 +1,14 @@
-import tuscon
-import shutil
-import os.path
 import json
-import json_csv
+from jinja2 import Environment, FileSystemLoader, select_autoescape
+env = Environment(
+    loader=FileSystemLoader("templates"),
+    autoescape=select_autoescape()
+)
 
+print("Hello, nitroguy10.github.io!")
 
-# Quality-of-life function to join tuscon.output_dir with other paths
-def output_path(*paths):
-    return os.path.join(tuscon.output_dir, *paths)
+song_data = json.load(open("data/song_data.json"))
+print(song_data["placeholder"][1]["foo"])
 
-
-# Set up tuscon
-tuscon.output_dir = "docs/"  # For use with Github Pages
-tuscon.empty_output_folder()
-
-# Copy favicons
-shutil.copytree("static/favicon", output_path("favicon"))
-shutil.move(output_path("favicon/favicon.ico"), output_path("favicon.ico"))
-
-# Copy images
-shutil.copytree("static/artwork", output_path("artwork"))
-shutil.copytree("static/gifs", output_path("gifs"))
-shutil.copytree("static/icons", output_path("icons"))
-
-# Copy scripts
-shutil.copytree("static/scripts", output_path("scripts"))
-
-# Copy unchanging HTML pages (non-templates)
-shutil.copy("static/pages/index.html", output_path("index.html"))
-shutil.copy("static/pages/roboplato.html", output_path("roboplato.html"))
-shutil.copy("static/pages/favorite_games.html", output_path("favorite_games.html"))
+template = env.get_template("test.html")
+print(template.render(template=True))

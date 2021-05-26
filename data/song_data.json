@@ -1,0 +1,16 @@
+{
+   "placeholder": [
+
+      {
+         "foo": "yeah",
+         "bar": "nope"
+      },
+
+      {
+         "foo": "sure",
+         "bar": "why not?",
+         "baz": "if you insist"
+      }
+
+   ]
+}

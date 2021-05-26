@@ -1,4 +1,3 @@
 # nitroguy10.github.io
 
-Built with [tuscon](https://github.com/NitroGuy10/tuscon).
-A Python module for static site generation made by yours truly.
+Built with [Jinja](https://jinja.palletsprojects.com/en/3.0.x/).
