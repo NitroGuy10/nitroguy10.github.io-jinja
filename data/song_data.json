@@ -4,16 +4,20 @@
    },
    "collections": {
       "Older Tracks": {
-         "description": "TODO"
+         "name": "Older Tracks",
+         "description": "This is where you can download my older songs and read a bit about my story with them. I certainly feel like I have grown a lot since I have started producing. These older tracks will always have a special place in my heart but, I'll admit, their production is less-than-spectacular. I mean, seriously, I didn't do ANY sort of specific mastering on my old FL tracks. Literally JUST the default limiter. Come on."
       },
       "Candy Fractals EP": {
-         "description": "TODO"
+         "name": "Candy Fractals EP",
+         "description": "My first ever EP and my first ever dive into the kinds of genres I've been listening to lately (mostly Dubstep lol). You can definitely expect more songs in this style in the future! This EP is a turning point for my production. Even if no one ever listens to it, I'm still so glad I made it! The artwork for this EP was done by a good friend of mine. Doesn't it look sick? It's certainly leagues better than my old cover artwork!"
       },
       "Singles": {
-         "description": "TODO"
+         "name": "Singles",
+         "description": ""
       },
       "Remixes": {
-         "description": "TODO"
+         "name": "Remixes",
+         "description": ""
       }
    },
    "songs": {
