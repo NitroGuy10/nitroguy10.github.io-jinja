@@ -2,13 +2,13 @@
 <html lang="en">
 <!-- Hiya! Nice to see you here! -->
 
-<!-- GENERATED FROM collection.html.jinja -->
+<!-- GENERATED FROM song.html.jinja -->
 
 <head>
     <title>The Sass</title>
 
     <meta charset="UTF-8">
-    <meta name="description" content="{{ collection.name }}">
+    <meta name="description" content="{{ song.name }}">
     <meta name="author" content="NitroGuy/NitroGuy10/The Sass">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,49 +18,57 @@
     <link rel="manifest" href="../favicon/site.webmanifest">
 
     <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/collection.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/song.css">
 
 </head>
 
 <body>
     <h1>The Sass</h1>
-    <p>
-        <button onclick="window.location.href = '../index.html#music'">Back to Site</button>
-    </p>
     <div id="content">
-        <h2>{{ collection.name }}</h2>
-        <div id="about">
-            <p>{{ collection.description }}</p>
-        </div>
         <div id="eachTrack">
             <table id="songList">
-                {% for song in collection.songs %}
-                <tr class="songInfo" id="{{ song.safeName }}">
-                    <td id="songDesc1"><strong>{{ song.name }}</strong>
+                <tr class="songInfo">
+                    <td id="songDesc1">
+                        <h4>{{ song.name }}</h4>
                         <p>{{ song.description }}</p>
                     </td>
                     <td id="songDesc2">
-                        <p id="cover"><a href="../songs/{{ song.safeName }}.html"><img class="coverimg"
-                                    src="../artwork/{{ song.coverLink }}" width="250" height="250"></a></p>
+                        <p id="cover"><img src="../artwork/{{ song.coverLink }}" width="250" height="250"></p>
                         <h3>Released: {{ song.releaseDateFormatted }}</h3>
                         <h3>Genre: {{ song.genre }}</h3>
+                        <h3>Collection: <a href="../collections/{{ song.safeCollection }}.html">{{ song.collection
+                                }}</a></h3>
+                        <hr>
+                        <h3 class="download">Free Download: <p>
+                                {% for link in song.downloadLinks %}
+                                <a href="{{ song.downloadLinks[link].link }}" class="download" target="_blank">({{
+                                    song.downloadLinks[link].type }})</a>
+                                {% endfor %}
+                            </p>
+                        </h3>
+                        <hr>
                         <h3>
-                            {% for link in song.downloadLinks %}
-                            <a href="{{ song.downloadLinks[link].link }}" class="download" target="_blank">({{
-                                song.downloadLinks[link].type }})</a>
-                            {% endfor %}
-                            <!-- {% for link in song.streamLinks %}
-                            <a href="{{ song.streamLinks[link].link }}" class="stream" target="_blank">({{ song.streamLinks[link].type
-                                }})</a>
-                            {% endfor %} -->
+                            {% if song.streamLinks.youtubeLink is defined %}
+                            <p class="otherLinks"><img src="../icons/youtube.png" width="32" height="32"><a
+                                    href="https://youtu.be/SSRHiM3Tujo" class="otherLinks" target="_blank">YouTube</a>
+                            </p>
+                            {% endif %}
+                            {% if song.streamLinks.soundcloudLink is defined %}
+                            <p class="otherLinks"><img src="../icons/soundcloud.png" width="32" height="32"><a
+                                    href="https://soundcloud.com/the-sass-music/endless-ft-vishnu" class="otherLinks"
+                                    target="_blank">SoundCloud</a></p>
+                            {% endif %}
                         </h3>
                     </td>
                 </tr>
-                {% endfor %}
             </table>
-
         </div>
     </div>
+    <br>
+    <br>
+    <footer>
+        <a class="mainSite" href="../index.html#music">Main Site</a>
+    </footer>
     <footer>
         <a href="https://www.youtube.com/channel/UCoJpTVMgEBnrF0KzaRZlklQ"><img src="../icons/youtube.png" height="32px"
                 width="32px" title="YouTube" alt="YouTube"></a>

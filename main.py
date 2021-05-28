@@ -29,6 +29,7 @@ for collection in song_data["collections"].values():
 song_data["collections"]["Candy Fractals EP"]["songs"] = []
 for song in song_data["songs"].values():
     song["safeName"] = make_safe(song["name"])
+    song["safeCollection"] = make_safe(song["collection"])
     song["releaseDateFormatted"] = format_date(song["releaseDate"])
     if song["collection"] == "Candy Fractals EP":
         song_data["collections"]["Candy Fractals EP"]["songs"].append(song)
@@ -36,3 +37,7 @@ for song in song_data["songs"].values():
 template = env.get_template("collection.html.jinja")
 with open("docs/collections/candy_fractals_ep.html", "w") as file:
     file.write(template.render(collection=song_data["collections"]["Candy Fractals EP"]))
+
+template = env.get_template("song.html.jinja")
+with open("docs/songs/endless_ft_vishnu.html", "w") as file:
+    file.write(template.render(song=song_data["songs"]["Endless (ft. Vishnu)"]))
