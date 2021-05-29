@@ -2,10 +2,13 @@ import json
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 
+# Make a string lowercase and remove/replace unusable characters
+# "()." are replaced with "" and " " is replaced with "_"
 def make_safe(string):
     return string.lower().replace("(", "").replace(")", "").replace(".", "").replace(" ", "_")
 
 
+# Format dates from "DD/MM/YYYY" to "(D)D english_month_name YYYY"
 def format_date(date_string):
     # datetime.datetime.strptime(date_string, "%d/%m/%Y").strftime("%d %B %Y")
     # The above would work but it zero-pads the date and determines month name based on the current locale
@@ -15,6 +18,7 @@ def format_date(date_string):
                                 " December "][int(date[1]) - 1] + date[2]
 
 
+# Set up Jinja environment
 env = Environment(
     loader=FileSystemLoader("templates"),
     autoescape=select_autoescape()
@@ -23,21 +27,28 @@ env = Environment(
 print("Hello, nitroguy10.github.io!")
 
 song_data = json.load(open("data/song_data.json"))
-for collection in song_data["collections"].values():
-    print(collection["name"])
 
-song_data["collections"]["Candy Fractals EP"]["songs"] = []
+
+# Fill in supplementary data for each song
+for collection in song_data["collections"].values():
+    collection["safeName"] = make_safe(collection["name"])
+    # Declare an array of songs for each collection
+    collection["songs"] = []
+
+# Fill in supplementary data for each song
 for song in song_data["songs"].values():
     song["safeName"] = make_safe(song["name"])
     song["safeCollection"] = make_safe(song["collection"])
     song["releaseDateFormatted"] = format_date(song["releaseDate"])
-    if song["collection"] == "Candy Fractals EP":
-        song_data["collections"]["Candy Fractals EP"]["songs"].append(song)
+    # Add a song to its collection's "songs" array
+    song_data["collections"][song["collection"]]["songs"].append(song)
 
 template = env.get_template("collection.html.jinja")
-with open("docs/collections/candy_fractals_ep.html", "w") as file:
-    file.write(template.render(collection=song_data["collections"]["Candy Fractals EP"]))
+for collection in song_data["collections"].values():
+    with open("docs/collections/" + collection["safeName"] + ".html", "w") as file:
+        file.write(template.render(collection=collection))
 
 template = env.get_template("song.html.jinja")
-with open("docs/songs/endless_ft_vishnu.html", "w") as file:
-    file.write(template.render(song=song_data["songs"]["Endless (ft. Vishnu)"]))
+for song in song_data["songs"].values():
+    with open("docs/songs/" + song["safeName"] + ".html", "w") as file:
+        file.write(template.render(song=song))
