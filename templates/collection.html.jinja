@@ -18,7 +18,7 @@
     <link rel="manifest" href="../favicon/site.webmanifest">
 
     <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/collection.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/music.css">
 
 </head>
 
@@ -36,10 +36,10 @@
             <table id="songList">
                 {% for song in collection.songs %}
                 <tr class="songInfo" id="{{ song.safeName }}">
-                    <td id="songDesc1"><strong>{{ song.name }}</strong>
+                    <td id="songDesc1" class="onCollectionPage"><strong>{{ song.name }}</strong>
                         <p>{{ song.description }}</p>
                     </td>
-                    <td id="songDesc2">
+                    <td id="songDesc2" class="onCollectionPage">
                         <p id="cover"><a href="../songs/{{ song.safeName }}.html"><img class="coverimg"
                                     src="../artwork/{{ song.coverLink }}" width="250" height="250"></a></p>
                         <h3>Released: {{ song.releaseDateFormatted }}</h3>
@@ -49,10 +49,12 @@
                             <a href="{{ song.downloadLinks[link].link }}" class="download" target="_blank">({{
                                 song.downloadLinks[link].type }})</a>
                             {% endfor %}
-                            <!-- {% for link in song.streamLinks %}
-                            <a href="{{ song.streamLinks[link].link }}" class="stream" target="_blank">({{ song.streamLinks[link].type
-                                }})</a>
-                            {% endfor %} -->
+                            {#
+                            {% for link in song.streamLinks %}
+                            <a href="{{ song.streamLinks[link].link }}" class="stream" target="_blank">({{
+                                song.streamLinks[link].type }})</a>
+                            {% endfor %}
+                            #}
                         </h3>
                     </td>
                 </tr>

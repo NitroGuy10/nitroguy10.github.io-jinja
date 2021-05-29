@@ -18,7 +18,7 @@
     <link rel="manifest" href="../favicon/site.webmanifest">
 
     <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/song.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/music.css">
 
 </head>
 
@@ -26,13 +26,13 @@
     <h1>The Sass</h1>
     <div id="content">
         <div id="eachTrack">
-            <table id="songList">
+            <table id="songList" class="songTable">
                 <tr class="songInfo">
-                    <td id="songDesc1">
+                    <td id="songDesc1" class="onSongPage">
                         <h4>{{ song.name }}</h4>
                         <p>{{ song.description }}</p>
                     </td>
-                    <td id="songDesc2">
+                    <td id="songDesc2" class="onSongPage">
                         <p id="cover"><img src="../artwork/{{ song.coverLink }}" width="250" height="250"></p>
                         <h3>Released: {{ song.releaseDateFormatted }}</h3>
                         <h3>Genre: {{ song.genre }}</h3>

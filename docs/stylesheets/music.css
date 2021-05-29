@@ -31,6 +31,11 @@ h4 {
 
 table {
     width: 100%;
+    border-collapse: collapse;
+}
+
+table.songTable {
+    width: 100%;
     margin-top: 30px;
     border-collapse: collapse;
     background-color: #222222;
@@ -48,12 +53,17 @@ td {
     font-size: 30px;
     vertical-align: top;
     border-top: 1px solid #444444;
-    padding: 12px;
 }
 
-td#songDesc1,
-td#songDesc2 {
+td.onCollectionPage {
+    padding-top: 30px;
+}
+
+
+td#songDesc1.onSongPage,
+td#songDesc2.onSongPage {
     border-top: none;
+    padding: 12px;
 }
 
 .download {
