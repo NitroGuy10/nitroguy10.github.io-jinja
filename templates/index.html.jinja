@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Hiya! Nice to see you here! -->
+
+<!-- GENERATED FROM index.html.jinja -->
+
+<head>
+    <title>NitroGuy</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="NitroGuy's Website">
+    <meta name="author" content="NitroGuy/NitroGuy10/The Sass">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+
+    <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+
+    <script src="scripts/w3.js"></script>
+    <script>
+        const tabs = ["#about", "#music", "#other"]
+
+        function openTab(page, start)
+        {
+            if (location.hash === tabs[page] && !start)
+            {
+                /*location.hash = "#about"
+                location.reload()*/
+                return
+            }
+            location.hash = tabs[page]
+            for (let i = 0; i < tabs.length; i++)
+            {
+                if (i === page)
+                {
+                    w3.show(tabs[i])
+                }
+                else
+                {
+                    w3.hide(tabs[i])
+                }
+
+            }
+        }
+
+        function start()
+        {
+            if (location.hash === "" || tabs.indexOf(location.hash) === -1)
+            {
+                openTab(0, true)
+            }
+            else
+            {
+                openTab(tabs.indexOf(location.hash), true)
+            }
+        }
+
+
+    </script>
+
+</head>
+
+<body onload="start(); window.scrollTo(0, 0)">
+    <h1>NitroGuy</h1>
+    <p>
+        <button onclick="openTab(0)">About</button>
+        <button onclick="openTab(1)">Music</button>
+        <button onclick="openTab(2)">Other</button>
+    </p>
+    <div id="content">
+        <div id="about">
+            <noscript>
+                <h2 class="noscript_heading">About</h2>
+            </noscript>
+            <p>Hi there!</p>
+            <p>I'm NitroGuy. Currently, I am a human who lives on Earth. My hobbies include programming, producing
+                music, editing videos, playing video games, and sleeping.</p>
+            <p>I am highly interested in computer science and software development. Java is
+                without a doubt my best language and the language I have spent the most time with. Recently, I've been
+                working a lot
+                with Processing and making cool graphical things&mdash;something I've never really done before. I have
+                also been using Python to great extent as of late and I really
+                enjoy coding in it. I've dabbled in JavaScript as well as some game engine
+                scripting languages such as Unity-C# and Godot's GDScript. I also have the teeny tiniest bit of C++
+                knowledge. Finally, I've only had a little bit of experience with
+                building simple circuits to manipulate with microcontrollers but I'm already in love.</p>
+            <p>Video games have been a massive part of my life but I find myself playing them less and less due to lack
+                of time. Some of my all-time favorites include, Minecraft (of course), Factorio,
+                Terraria, Team Fortress 2, and <a href="favorite_games.html" class="whitelink">more</a>. As of the
+                time of writing this, I am currently playing a lot
+                of Overwatch.</p>
+            <p>I am chronically addicted to music. I love playing, producing, and listening to music. I've loved a
+                variety of genres over the years but right now I am most fixated on Dubstep and EDM in general.</p>
+            <p>he/him</p>
+        </div>
+        <noscript>
+            <hr class="noscript_hr">
+        </noscript>
+        <div id="music">
+            <noscript>
+                <h2 class="noscript_heading">Music</h2>
+            </noscript>
+            <img src="artwork/sass_tiny.png" id="monkey" align="right">
+            <p>I produce EDM under the alias "The Sass". My music is all about emotion, fun, and taking the listener on
+                a journey. It's also chock-full of lead solos and major 7s lol.</p>
+            <p>If you wanna have a listen, check me out on <a
+                    href="https://www.youtube.com/channel/UCoJpTVMgEBnrF0KzaRZlklQ">YouTube</a> and <a
+                    href="https://soundcloud.com/the-sass-music">SoundCloud</a>.</p>
+            <p>Or, if you'd prefer, read about story behind each of my tracks (and download them too).</p>
+            <ul>
+                {% for collection in collections %}
+                <li><a href="collections/{{ collection.safeName }}.html">{{ collection.name }}</a></li>
+                {% endfor %}
+                <br>
+                <a href="https://github.com/NitroGuy10/nitroguy10.github.io/blob/master/data/song_data.json" class="json">JSON file with all song info</a>
+            </ul>
+        </div>
+        <noscript>
+            <hr class="noscript_hr">
+        </noscript>
+        <div id="other">
+            <noscript>
+                <h2 class="noscript_heading">Other</h2>
+            </noscript>
+            <p><a href="games.html">Games</a></p>
+            <p><a href="https://nitroguy10.github.io/ResistorTool/">ResistorTool</a></p>
+            <p><a href="roboplato.html">Neural Network Trained on Plato's Works</a></p>
+            <p><a href="https://nitroguy10.github.io/ClickType/">ClickType</a></p>
+        </div>
+    </div>
+    <footer>
+        <a href="https://www.youtube.com/channel/UCoJpTVMgEBnrF0KzaRZlklQ"><img src="icons/youtube.png"
+                height="32px" width="32px" title="YouTube" alt="YouTube"></a>
+        <a href="https://soundcloud.com/the-sass-music"><img src="icons/soundcloud.png" height="32px"
+                width="32px" title="SoundCloud" alt="SoundCloud"></a>
+        <a href="https://github.com/NitroGuy10"><img src="icons/github.png" height="32px"
+                width="32px" title="GitHub" alt="GitHub"></a>
+        <a href="https://twitter.com/NitroGuy10"><img src="icons/twitter.png" height="32px" width="32px"
+                title="Twitter" alt="Twitter"></a>
+        <div id="email" title="E-Mail">nitroguysm(at)gmail.com</div>
+    </footer>
+    <footer id="copyright">&copy; 2021 NitroGuy</footer>
+</body>
+
+</html>

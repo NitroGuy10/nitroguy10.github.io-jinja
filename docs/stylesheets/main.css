@@ -1,0 +1,123 @@
+body {
+    font-family: "Tomorrow", sans-serif;
+    color: #dddddd;
+    background-color: #121212;
+    margin: 0px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 150px;
+    background-color: #333333;
+    line-height: 180px;
+    margin: 0px;
+    padding-bottom: 20px;
+}
+
+h2.noscript_heading {
+    font-size: 60px;
+    line-height: 20px;
+    margin: 0px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+hr.noscript_hr {
+    margin-bottom: 40px;
+}
+
+p {
+    font-size: 30px;
+}
+
+li {
+    font-size: 30px;
+}
+
+button {
+    background-color: #252525;
+    border: none;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 40px;
+    font-family: "Tomorrow", sans-serif;
+    color: #bbbbbb;
+}
+
+a:link,
+a:visited {
+    color: #00aaff;
+}
+
+a.whitelink {
+    color: inherit;
+}
+
+.json {
+    font-size: 13px;
+}
+
+#email {
+    font-size: 12px;
+}
+
+#copyright {
+    padding-top: 15px;
+    padding-bottom: 3px;
+}
+
+#games {
+    text-align: center;
+}
+
+#other {
+    text-align: center;
+}
+
+#monkey {
+    padding-left: 30px;
+}
+
+iframe {
+    margin: 0px;
+    padding: 0px;
+}
+
+button:hover {
+    background-color: #171717;
+}
+
+#content {
+    text-align: justify;
+    /* margin-left: 300px;
+    margin-right: 300px; */
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+@media only screen and (max-width: 1000px) {
+    h1 {
+        font-size: 20vw;
+        line-height: 22vw;
+    }
+
+    p {
+        font-size: 4vw;
+    }
+
+    button {
+        font-size: 5vw;
+        padding: 1vw;
+    }
+
+    .gamesgif {
+        width: 98%
+    }
+
+    #content {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Hiya! Nice to see you here! -->
+
+<!-- GENERATED FROM collection.html.jinja -->
+
+<head>
+    <title>The Sass</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="{{ collection.name }}">
+    <meta name="author" content="NitroGuy/NitroGuy10/The Sass">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/site.webmanifest">
+
+    <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/music.css">
+
+</head>
+
+<body>
+    <h1>The Sass</h1>
+    <p>
+        <button onclick="window.location.href = '../index.html#music'">Back to Site</button>
+    </p>
+    <div id="content">
+        <h2>{{ collection.name }}</h2>
+        <div id="about">
+            <p>{{ collection.description }}</p>
+        </div>
+        <div id="eachTrack">
+            <table id="songList">
+                {% for song in collection.songs %}
+                <tr class="songInfo" id="{{ song.safeName }}">
+                    <td id="songDesc1" class="onCollectionPage"><strong>{{ song.name }}</strong>
+                        <p>{{ song.description }}</p>
+                    </td>
+                    <td id="songDesc2" class="onCollectionPage">
+                        <p id="cover"><a href="../songs/{{ song.safeName }}.html"><img class="coverimg"
+                                    src="../artwork/{{ song.coverLink }}" width="250" height="250"></a></p>
+                        <h3>Released: {{ song.releaseDateFormatted }}</h3>
+                        <h3>Genre: {{ song.genre }}</h3>
+                        <h3>
+                            {% for link in song.downloadLinks %}
+                            <a href="{{ song.downloadLinks[link].link }}" class="downloadOnCollection" target="_blank">({{
+                                song.downloadLinks[link].type }})</a>
+                            {% endfor %}
+                            {#
+                            {% for link in song.streamLinks %}
+                            <a href="{{ song.streamLinks[link].link }}" class="stream" target="_blank">({{
+                                song.streamLinks[link].type }})</a>
+                            {% endfor %}
+                            #}
+                        </h3>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+
+        </div>
+    </div>
+    <footer>
+        <a href="https://www.youtube.com/channel/UCoJpTVMgEBnrF0KzaRZlklQ"><img src="../icons/youtube.png" height="32px"
+                width="32px" title="YouTube" alt="YouTube"></a>
+        <a href="https://soundcloud.com/the-sass-music"><img src="../icons/soundcloud.png" height="32px" width="32px"
+                title="SoundCloud" alt="SoundCloud"></a>
+        <a href="https://github.com/NitroGuy10"><img src="../icons/github.png" height="32px" width="32px" title="GitHub"
+                alt="GitHub"></a>
+        <a href="https://twitter.com/NitroGuy10"><img src="../icons/twitter.png" height="32px" width="32px"
+                title="Twitter" alt="Twitter"></a>
+        <div id="email" title="E-Mail">nitroguysm(at)gmail.com</div>
+    </footer>
+    <footer id="copyright">&copy; 2021 NitroGuy</footer>
+</body>
+
+</html>
