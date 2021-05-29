@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<!-- Hiya! Nice to see you here! -->
+
+<head>
+    <title>The Sass</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="The Sass's Older Tracks">
+    <meta name="author" content="NitroGuy/NitroGuy10/The Sass">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+
+    <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+</head>
+
+<body>
+    <h1>The Sass</h1>
+    <div id="content">
+        <p>Yo! I don't use links_to.html pages anymore. If you have JavaScript enabled, you should be redirected any
+            second now...</p>
+        <p>If not, you'll find all my music-related pages <a href="index.html#music">here</a>.</p>
+    </div>
+    <script>
+        function removeChars(string, chars)
+        {
+            for (let i = 0; i < chars.length; i++)
+            {
+                string = string.split(chars[i]).join("")
+            }
+            return string
+        }
+
+        window.location = "songs/" + removeChars(location.hash, ["#", "(", ")", "."]) + ".html"
+    </script>
+</body>
+
+</html>

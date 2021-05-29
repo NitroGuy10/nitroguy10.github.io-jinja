@@ -41,7 +41,7 @@
                         <hr>
                         <h3 class="download">Free Download: <p>
                                 {% for link in song.downloadLinks %}
-                                <a href="{{ song.downloadLinks[link].link }}" class="download" target="_blank">({{
+                                <a href="{{ song.downloadLinks[link].link }}" class="downloadLink" target="_blank">({{
                                     song.downloadLinks[link].type }})</a>
                                 {% endfor %}
                             </p>
@@ -50,12 +50,12 @@
                         <h3>
                             {% if song.streamLinks.youtubeLink is defined %}
                             <p class="otherLinks"><img src="../icons/youtube.png" width="32" height="32"><a
-                                    href="https://youtu.be/SSRHiM3Tujo" class="otherLinks" target="_blank">YouTube</a>
+                                    href="{{ song.streamLinks.youtubeLink.link }}" class="otherLinks" target="_blank">YouTube</a>
                             </p>
                             {% endif %}
                             {% if song.streamLinks.soundcloudLink is defined %}
                             <p class="otherLinks"><img src="../icons/soundcloud.png" width="32" height="32"><a
-                                    href="https://soundcloud.com/the-sass-music/endless-ft-vishnu" class="otherLinks"
+                                    href="{{ song.streamLinks.soundcloudLink.link }}" class="otherLinks"
                                     target="_blank">SoundCloud</a></p>
                             {% endif %}
                         </h3>

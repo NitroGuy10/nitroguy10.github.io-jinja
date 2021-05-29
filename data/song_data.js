@@ -1,3 +1,6 @@
+// DEPRICATED
+// song_data.json is now used instead
+
 const collectionNames = ["Older Tracks", "Candy Fractals EP", "Jump", "Neddie - Figment (The Sass Remix)"]
 
 const isSingle = [false, false, true, true]

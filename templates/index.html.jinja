@@ -112,15 +112,9 @@
                     href="https://soundcloud.com/the-sass-music">SoundCloud</a>.</p>
             <p>Or, if you'd prefer, read about story behind each of my tracks (and download them too).</p>
             <ul>
-                
-                <li><a href="collections/remixes.html">Remixes</a></li>
-                
-                <li><a href="collections/singles.html">Singles</a></li>
-                
-                <li><a href="collections/candy_fractals_ep.html">Candy Fractals EP</a></li>
-                
-                <li><a href="collections/older_tracks.html">Older Tracks</a></li>
-                
+                {% for collection in collections %}
+                <li><a href="collections/{{ collection.safeName }}.html">{{ collection.name }}</a></li>
+                {% endfor %}
                 <br>
                 <a href="https://github.com/NitroGuy10/nitroguy10.github.io/blob/master/data/song_data.json" class="json">JSON file with all song info</a>
             </ul>

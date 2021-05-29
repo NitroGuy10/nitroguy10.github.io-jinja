@@ -43,6 +43,10 @@ for song in song_data["songs"].values():
     # Add a song to its collection's "songs" array
     song_data["collections"][song["collection"]]["songs"].append(song)
 
+template = env.get_template("index.html.jinja")
+with open("docs/index.html", "w") as file:
+    file.write(template.render(collections=reversed(song_data["collections"].values())))
+
 template = env.get_template("collection.html.jinja")
 for collection in song_data["collections"].values():
     with open("docs/collections/" + collection["safeName"] + ".html", "w") as file:

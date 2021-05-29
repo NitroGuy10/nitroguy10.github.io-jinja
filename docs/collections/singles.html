@@ -8,7 +8,7 @@
     <title>The Sass</title>
 
     <meta charset="UTF-8">
-    <meta name="description" content="{{ collection.name }}">
+    <meta name="description" content="Singles">
     <meta name="author" content="NitroGuy/NitroGuy10/The Sass">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -28,37 +28,33 @@
         <button onclick="window.location.href = '../index.html#music'">Back to Site</button>
     </p>
     <div id="content">
-        <h2>{{ collection.name }}</h2>
+        <h2>Singles</h2>
         <div id="about">
-            <p>{{ collection.description }}</p>
+            <p></p>
         </div>
         <div id="eachTrack">
             <table id="songList">
-                {% for song in collection.songs %}
-                <tr class="songInfo" id="{{ song.safeName }}">
-                    <td id="songDesc1" class="onCollectionPage"><strong>{{ song.name }}</strong>
-                        <p>{{ song.description }}</p>
+                
+                <tr class="songInfo" id="jump">
+                    <td id="songDesc1" class="onCollectionPage"><strong>Jump</strong>
+                        <p>My first proper growly brostep track. This was super fun to make and I sat on it for nearly a YEAR before finally calling it done and releasing it. More music theory than sound design in this one but I think that's gonna be a trend in my music... at least for a while.</p>
                     </td>
                     <td id="songDesc2" class="onCollectionPage">
-                        <p id="cover"><a href="../songs/{{ song.safeName }}.html"><img class="coverimg"
-                                    src="../artwork/{{ song.coverLink }}" width="250" height="250"></a></p>
-                        <h3>Released: {{ song.releaseDateFormatted }}</h3>
-                        <h3>Genre: {{ song.genre }}</h3>
+                        <p id="cover"><a href="../songs/jump.html"><img class="coverimg"
+                                    src="../artwork/Jump.png" width="250" height="250"></a></p>
+                        <h3>Released: 5 March 2021</h3>
+                        <h3>Genre: Dubstep</h3>
                         <h3>
-                            {% for link in song.downloadLinks %}
-                            <a href="{{ song.downloadLinks[link].link }}" class="downloadOnCollection" target="_blank">({{
-                                song.downloadLinks[link].type }})</a>
-                            {% endfor %}
-                            {#
-                            {% for link in song.streamLinks %}
-                            <a href="{{ song.streamLinks[link].link }}" class="stream" target="_blank">({{
-                                song.streamLinks[link].type }})</a>
-                            {% endfor %}
-                            #}
+                            
+                            <a href="https://drive.google.com/file/d/1ERQg6GqDAtpX4E9nc6AEpdICyIM71NBU/view?usp=sharing" class="downloadOnCollection" target="_blank">(mp3)</a>
+                            
+                            <a href="https://drive.google.com/file/d/1xVNQlv46hiih_XZbNfhaNsOpJ9YgXxqk/view?usp=sharing" class="downloadOnCollection" target="_blank">(wav)</a>
+                            
+                            
                         </h3>
                     </td>
                 </tr>
-                {% endfor %}
+                
             </table>
 
         </div>

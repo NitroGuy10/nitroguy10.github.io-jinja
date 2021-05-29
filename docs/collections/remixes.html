@@ -8,7 +8,7 @@
     <title>The Sass</title>
 
     <meta charset="UTF-8">
-    <meta name="description" content="{{ collection.name }}">
+    <meta name="description" content="Remixes">
     <meta name="author" content="NitroGuy/NitroGuy10/The Sass">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -28,37 +28,33 @@
         <button onclick="window.location.href = '../index.html#music'">Back to Site</button>
     </p>
     <div id="content">
-        <h2>{{ collection.name }}</h2>
+        <h2>Remixes</h2>
         <div id="about">
-            <p>{{ collection.description }}</p>
+            <p></p>
         </div>
         <div id="eachTrack">
             <table id="songList">
-                {% for song in collection.songs %}
-                <tr class="songInfo" id="{{ song.safeName }}">
-                    <td id="songDesc1" class="onCollectionPage"><strong>{{ song.name }}</strong>
-                        <p>{{ song.description }}</p>
+                
+                <tr class="songInfo" id="neddie_-_figment_the_sass_remix">
+                    <td id="songDesc1" class="onCollectionPage"><strong>Neddie - Figment (The Sass Remix)</strong>
+                        <p>A cinematic melodic dubstep remix of Neddie - Figment for his Figment Remix Contest. Definitely my most polished and well-constructed track yet. I think my production is improving O_o. This one actually placed first! I'm so grateful for all the support I've gotten from this tune! You guys are the best <3</p>
                     </td>
                     <td id="songDesc2" class="onCollectionPage">
-                        <p id="cover"><a href="../songs/{{ song.safeName }}.html"><img class="coverimg"
-                                    src="../artwork/{{ song.coverLink }}" width="250" height="250"></a></p>
-                        <h3>Released: {{ song.releaseDateFormatted }}</h3>
-                        <h3>Genre: {{ song.genre }}</h3>
+                        <p id="cover"><a href="../songs/neddie_-_figment_the_sass_remix.html"><img class="coverimg"
+                                    src="../artwork/Figment_Remix.png" width="250" height="250"></a></p>
+                        <h3>Released: 8 March 2021</h3>
+                        <h3>Genre: Melodic Dubstep</h3>
                         <h3>
-                            {% for link in song.downloadLinks %}
-                            <a href="{{ song.downloadLinks[link].link }}" class="downloadOnCollection" target="_blank">({{
-                                song.downloadLinks[link].type }})</a>
-                            {% endfor %}
-                            {#
-                            {% for link in song.streamLinks %}
-                            <a href="{{ song.streamLinks[link].link }}" class="stream" target="_blank">({{
-                                song.streamLinks[link].type }})</a>
-                            {% endfor %}
-                            #}
+                            
+                            <a href="https://drive.google.com/file/d/1JMOu1NaaLvtRoC0an9Q1i7XkC9I7ZJ2u/view?usp=sharing" class="downloadOnCollection" target="_blank">(mp3)</a>
+                            
+                            <a href="https://drive.google.com/file/d/1XA71_iXlzOJupow4zOLq8z-vHhjqgLlj/view?usp=sharing" class="downloadOnCollection" target="_blank">(wav)</a>
+                            
+                            
                         </h3>
                     </td>
                 </tr>
-                {% endfor %}
+                
             </table>
 
         </div>
