@@ -4,6 +4,7 @@ body {
     background-color: #121212;
     margin: 0px;
     text-align: center;
+    overflow-y: scroll;
 }
 
 h1 {
@@ -99,6 +100,7 @@ button {
     font-size: 40px;
     font-family: "Tomorrow", sans-serif;
     color: #bbbbbb;
+    cursor: pointer;
 }
 
 .mainSite {

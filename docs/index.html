@@ -20,56 +20,14 @@
     <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
 
-    <script src="scripts/w3.js"></script>
-    <script>
-        const tabs = ["#about", "#music", "#other"]
-
-        function openTab(page, start)
-        {
-            if (location.hash === tabs[page] && !start)
-            {
-                /*location.hash = "#about"
-                location.reload()*/
-                return
-            }
-            location.hash = tabs[page]
-            for (let i = 0; i < tabs.length; i++)
-            {
-                if (i === page)
-                {
-                    w3.show(tabs[i])
-                }
-                else
-                {
-                    w3.hide(tabs[i])
-                }
-
-            }
-        }
-
-        function start()
-        {
-            if (location.hash === "" || tabs.indexOf(location.hash) === -1)
-            {
-                openTab(0, true)
-            }
-            else
-            {
-                openTab(tabs.indexOf(location.hash), true)
-            }
-        }
-
-
-    </script>
-
 </head>
 
 <body onload="start(); window.scrollTo(0, 0)">
     <h1>NitroGuy</h1>
     <p>
-        <button onclick="openTab(0)">About</button>
-        <button onclick="openTab(1)">Music</button>
-        <button onclick="openTab(2)">Other</button>
+        <noscript><a href="#about"></noscript><button onclick="openTab(0)">About</button><noscript></a></noscript>
+        <noscript><a href="#music"></noscript><button onclick="openTab(1)">Music</button><noscript></a></noscript>
+        <noscript><a href="#other"></noscript><button onclick="openTab(2)">Other</button><noscript></a></noscript>
     </p>
     <div id="content">
         <div id="about">
@@ -122,7 +80,8 @@
                 <li><a href="collections/older_tracks.html">Older Tracks</a></li>
                 
                 <br>
-                <a href="https://github.com/NitroGuy10/nitroguy10.github.io/blob/master/data/song_data.json" class="json">JSON file with all song info</a>
+                <a href="https://github.com/NitroGuy10/nitroguy10.github.io/blob/master/data/song_data.json"
+                    class="json">JSON file with all song info</a>
             </ul>
         </div>
         <noscript>
@@ -139,17 +98,56 @@
         </div>
     </div>
     <footer>
-        <a href="https://www.youtube.com/channel/UCoJpTVMgEBnrF0KzaRZlklQ"><img src="icons/youtube.png"
-                height="32px" width="32px" title="YouTube" alt="YouTube"></a>
-        <a href="https://soundcloud.com/the-sass-music"><img src="icons/soundcloud.png" height="32px"
-                width="32px" title="SoundCloud" alt="SoundCloud"></a>
-        <a href="https://github.com/NitroGuy10"><img src="icons/github.png" height="32px"
-                width="32px" title="GitHub" alt="GitHub"></a>
-        <a href="https://twitter.com/NitroGuy10"><img src="icons/twitter.png" height="32px" width="32px"
-                title="Twitter" alt="Twitter"></a>
+        <a href="https://www.youtube.com/channel/UCoJpTVMgEBnrF0KzaRZlklQ"><img src="icons/youtube.png" height="32px"
+                width="32px" title="YouTube" alt="YouTube"></a>
+        <a href="https://soundcloud.com/the-sass-music"><img src="icons/soundcloud.png" height="32px" width="32px"
+                title="SoundCloud" alt="SoundCloud"></a>
+        <a href="https://github.com/NitroGuy10"><img src="icons/github.png" height="32px" width="32px" title="GitHub"
+                alt="GitHub"></a>
+        <a href="https://twitter.com/NitroGuy10"><img src="icons/twitter.png" height="32px" width="32px" title="Twitter"
+                alt="Twitter"></a>
         <div id="email" title="E-Mail">nitroguysm(at)gmail.com</div>
     </footer>
     <footer id="copyright">&copy; 2021 NitroGuy</footer>
+
+    <script>
+        const TABS = ["#about", "#music", "#other"]
+
+        function openTab(page, start)
+        {
+            if (location.hash === TABS[page] && !start)
+            {
+                /*location.hash = "#about"
+                location.reload()*/
+                return
+            }
+            location.hash = TABS[page]
+            for (let i = 0; i < TABS.length; i++)
+            {
+                if (i === page)
+                {
+                    document.getElementById(TABS[i].substring(1)).style.display = "block"
+                }
+                else
+                {
+                    document.getElementById(TABS[i].substring(1)).style.display = "none"
+                }
+
+            }
+        }
+
+        function start()
+        {
+            if (location.hash === "" || TABS.indexOf(location.hash) === -1)
+            {
+                openTab(0, true)
+            }
+            else
+            {
+                openTab(TABS.indexOf(location.hash), true)
+            }
+        }
+    </script>
 </body>
 
 </html>
