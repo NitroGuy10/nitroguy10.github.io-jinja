@@ -15,6 +15,10 @@ h1 {
     padding-bottom: 20px;
 }
 
+.longNameH1 {
+    font-size: 120px;
+}
+
 h2.noscript_heading {
     font-size: 60px;
     line-height: 20px;
@@ -103,6 +107,10 @@ button:hover {
     h1 {
         font-size: 20vw;
         line-height: 22vw;
+    }
+
+    .longNameH1 {
+        font-size: 17vw;
     }
 
     p {

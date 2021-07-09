@@ -43,6 +43,10 @@ for song in song_data["songs"].values():
     # Add a song to its collection's "songs" array
     song_data["collections"][song["collection"]]["songs"].append(song)
 
+# Reverse the order of songs in the Remixes and Singles collections for better design language
+song_data["collections"]["Remixes"]["songs"] = reversed(song_data["collections"]["Remixes"]["songs"])
+song_data["collections"]["Singles"]["songs"] = reversed(song_data["collections"]["Singles"]["songs"])
+
 template = env.get_template("index.html.jinja")
 with open("docs/index.html", "w") as file:
     file.write(template.render(collections=reversed(song_data["collections"].values())))
