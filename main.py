@@ -1,5 +1,6 @@
 import json
 from jinja2 import Environment, FileSystemLoader, select_autoescape
+from datetime import date
 
 
 # Make a string lowercase and remove/replace unusable characters
@@ -8,14 +9,20 @@ def make_safe(string):
     return string.lower().replace("(", "").replace(")", "").replace(".", "").replace(" ", "_")
 
 
+# Create a datetime.date object that represents a song's release date
+def get_release_date(item):
+    date_parts = item["releaseDate"].split("/")
+    return date(int(date_parts[2]), int(date_parts[1]), int(date_parts[0]))
+
+
 # Format dates from "DD/MM/YYYY" to "(D)D english_month_name YYYY"
 def format_date(date_string):
     # datetime.datetime.strptime(date_string, "%d/%m/%Y").strftime("%d %B %Y")
     # The above would work but it zero-pads the date and determines month name based on the current locale
-    date = date_string.split("/")
-    return str(int(date[0])) + [" January ", " February ", " March ", " April ", " May ", " June ", " July ",
+    date_parts = date_string.split("/")
+    return str(int(date_parts[0])) + [" January ", " February ", " March ", " April ", " May ", " June ", " July ",
                                 " August ", " September ", " October ", " November ",
-                                " December "][int(date[1]) - 1] + date[2]
+                                " December "][int(date_parts[1]) - 1] + date_parts[2]
 
 
 # Set up Jinja environment
@@ -44,12 +51,21 @@ for song in song_data["songs"].values():
     song_data["collections"][song["collection"]]["songs"].append(song)
 
 # Reverse the order of songs in the Remixes and Singles collections for better design language
-song_data["collections"]["Remixes"]["songs"] = reversed(song_data["collections"]["Remixes"]["songs"])
-song_data["collections"]["Singles"]["songs"] = reversed(song_data["collections"]["Singles"]["songs"])
+# As such, the most recent songs occur first
+remixes_list = song_data["collections"]["Remixes"]["songs"]
+singles_list = song_data["collections"]["Singles"]["songs"]
+song_data["collections"]["Remixes"]["songs"] = reversed(remixes_list)
+song_data["collections"]["Singles"]["songs"] = reversed(singles_list)
+
+# Make a list of singles, remixes, and collections together in reverse chronological order
+collections_list = list(song_data["collections"].values())[2:]  # Excludes Singles and Remixes
+chronological_list = collections_list + remixes_list + singles_list
+chronological_list = reversed(sorted(chronological_list, key=lambda item: get_release_date(item)))
 
 template = env.get_template("index.html.jinja")
 with open("docs/index.html", "w") as file:
-    file.write(template.render(collections=reversed(song_data["collections"].values())))
+    file.write(template.render(collections=reversed(song_data["collections"].values()),
+                               chronological_list=chronological_list))
 
 template = env.get_template("collection.html.jinja")
 for collection in song_data["collections"].values():

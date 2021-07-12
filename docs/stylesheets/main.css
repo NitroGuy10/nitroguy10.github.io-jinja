@@ -35,8 +35,13 @@ p {
     font-size: 30px;
 }
 
-li {
-    font-size: 30px;
+ul {
+    font-size: 35px;
+    text-align: left;
+}
+
+.subBullet {
+    font-size: 20px;
 }
 
 button {

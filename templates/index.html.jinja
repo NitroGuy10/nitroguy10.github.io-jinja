@@ -70,8 +70,23 @@
                     href="https://soundcloud.com/the-sass-music">SoundCloud</a>.</p>
             <p>Or, if you'd prefer, read about story behind each of my tracks (and download them too).</p>
             <ul>
-                {% for collection in collections %}
-                <li><a href="collections/{{ collection.safeName }}.html">{{ collection.name }}</a></li>
+                {% for item in chronological_list %}
+                {% if "songs" in item %}
+                <li>
+                    <a href="collections/{{ item.safeName }}.html">{{ item.name }}</a>
+                    <ul class="subBullet">
+                        {% for song in item.songs %}
+                        <li>
+                            <a href="songs/{{ song.safeName }}.html">{{ song.name }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                {% else %}
+                <li>
+                    <a href="songs/{{ item.safeName }}.html">{{ item.name }}</a>
+                </li>
+                {% endif %}
                 {% endfor %}
                 <br>
                 <a href="https://github.com/NitroGuy10/nitroguy10.github.io/blob/master/data/song_data.json"
