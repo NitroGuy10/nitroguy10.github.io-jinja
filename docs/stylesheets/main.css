@@ -15,11 +15,11 @@ h1 {
     padding-bottom: 20px;
 }
 
-.longNameH1 {
+h1.long-name {
     font-size: 120px;
 }
 
-h2.noscript_heading {
+h2.noscript-heading {
     font-size: 60px;
     line-height: 20px;
     margin: 0px;
@@ -27,7 +27,7 @@ h2.noscript_heading {
     text-align: center;
 }
 
-hr.noscript_hr {
+hr.noscript-hr {
     margin-bottom: 40px;
 }
 
@@ -40,12 +40,12 @@ ul {
     text-align: left;
 }
 
-.songBullets {
+.song-bullets {
     font-size: 20px;
     text-align: center;
 }
 
-.songBullet {
+.song-bullets li {
     padding-bottom: 8px;
 }
 
@@ -71,7 +71,7 @@ table {
     border-collapse: collapse;
 }
 
-.scrollTable {
+.scroll-table {
     overflow-y: scroll;
     height: 800px;
     background-color: #1A1A1A;
@@ -90,17 +90,17 @@ a:visited {
     color: #00aaff;
 }
 
-a.whitelink {
+a.white-link {
     color: inherit;
 }
 
-.itemNameLarge {
+.item-name-large {
     font-size: 50px;
     text-align: center;
     vertical-align: middle;
 }
 
-.singleText {
+.single-text {
     font-size: 25px;
     color:#666
 }
@@ -127,13 +127,8 @@ a.whitelink {
     text-align: center;
 }
 
-#musicLogo {
+#music-logo {
     padding-left: 30px;
-}
-
-iframe {
-    margin: 0px;
-    padding: 0px;
 }
 
 button:hover {
@@ -154,7 +149,7 @@ button:hover {
         line-height: 22vw;
     }
 
-    .longNameH1 {
+    h1.long-name {
         font-size: 17vw;
     }
 
@@ -167,15 +162,15 @@ button:hover {
         padding: 1vw;
     }
 
-    .gamesgif {
+    .games-gif {
         width: 98%
     }
     
-    .songBullets {
+    .song-bullets {
         font-size: 5vw;
     }
 
-    .singleText {
+    .single-text {
         font-size: 5vw;
     }
 
@@ -183,16 +178,16 @@ button:hover {
         font-size: 5vw;
     }
 
-    .itemNameLarge {
+    .item-name-large {
         font-size: 8vw;
     }
 
-    .coverimg {
+    .cover-image {
         width: 25vw;
         height: 25vw;
     }
 
-    #musicLogo {
+    #music-logo {
         width: 25vw;
         height: 25vw;
     }

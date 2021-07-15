@@ -36,17 +36,17 @@
             <table id="songList">
                 {% for song in collection.songs %}
                 <tr class="songInfo" id="{{ song.safeName }}">
-                    <td id="songDesc1" class="onCollectionPage"><strong>{{ song.name }}</strong>
+                    <td id="song-desc-1" class="on-collection-page"><strong>{{ song.name }}</strong>
                         <p>{{ song.description }}</p>
                     </td>
-                    <td id="songDesc2" class="onCollectionPage">
-                        <p id="cover"><a href="../songs/{{ song.safeName }}.html"><img class="coverimg"
+                    <td id="song-desc-2" class="on-collection-page">
+                        <p id="cover"><a href="../songs/{{ song.safeName }}.html"><img class="cover-image"
                                     src="../artwork/{{ song.coverLink }}" width="250" height="250"></a></p>
                         <h3>Released: {{ song.releaseDateFormatted }}</h3>
                         <h3>Genre: {{ song.genre }}</h3>
                         <h3>
                             {% for link in song.downloadLinks %}
-                            <a href="{{ song.downloadLinks[link].link }}" class="downloadOnCollection" target="_blank">({{
+                            <a href="{{ song.downloadLinks[link].link }}" target="_blank">({{
                                 song.downloadLinks[link].type }})</a>
                             {% endfor %}
                             {#

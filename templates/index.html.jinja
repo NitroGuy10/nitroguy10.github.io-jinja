@@ -18,7 +18,7 @@
     <link rel="manifest" href="favicon/site.webmanifest">
 
     <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/main_sass.css">
 
 </head>
 
@@ -32,7 +32,7 @@
     <div id="content">
         <div id="about">
             <noscript>
-                <h2 class="noscript_heading">About</h2>
+                <h2 class="noscript-heading">About</h2>
             </noscript>
             <p>Hi there!</p>
             <p>I'm NitroGuy. Currently, I am a human who lives on Earth. My hobbies include programming, producing
@@ -48,7 +48,7 @@
                 building simple circuits to manipulate with microcontrollers but I'm already in love.</p>
             <p>Video games have been a massive part of my life but I find myself playing them less and less due to lack
                 of time. Some of my all-time favorites include, Minecraft (of course), Factorio,
-                Terraria, Team Fortress 2, and <a href="favorite_games.html" class="whitelink">more</a>. As of the
+                Terraria, Team Fortress 2, and <a href="favorite_games.html" class="white-link">more</a>. As of the
                 time of writing this, I am currently playing a lot
                 of Overwatch.</p>
             <p>I am chronically addicted to music. I love playing, producing, and listening to music. I've loved a
@@ -56,48 +56,48 @@
             <p>he/him</p>
         </div>
         <noscript>
-            <hr class="noscript_hr">
+            <hr class="noscript-hr">
         </noscript>
         <div id="music">
             <noscript>
-                <h2 class="noscript_heading">Music</h2>
+                <h2 class="noscript-heading">Music</h2>
             </noscript>
-            <img src="artwork/sass_tiny.png" id="musicLogo" align="right">
+            <img src="artwork/sass_tiny.png" id="music-logo" align="right">
             <p>I produce EDM under the alias "The Sass". My music is all about emotion, fun, and taking the listener on
                 a journey. It's also chock-full of lead solos and major 7s lol.</p>
             <p>If you wanna have a listen, check me out on <a
                     href="https://www.youtube.com/channel/UCoJpTVMgEBnrF0KzaRZlklQ">YouTube</a> and <a
                     href="https://soundcloud.com/the-sass-music">SoundCloud</a>.</p>
             <p>Or, if you'd prefer, read about story behind each of my tracks (and download them too).</p>
-            <noscript><div class="scrollTable"></noscript>
+            <noscript><div class="scroll-table"></noscript>
                 <table>
                     {% for item in chronological_list %}
                     {% if "songs" in item %}
                     <tr>
-                        <td class="itemNameLarge">
-                            <p class="itemNameLarge"><a href="collections/{{ item.safeName }}.html">{{ item.name }}</a>
+                        <td class="item-name-large">
+                            <p class="item-name-large"><a href="collections/{{ item.safeName }}.html">{{ item.name }}</a>
                             </p>
-                            <ul class="songBullets">
+                            <ul class="song-bullets">
                                 {% for song in item.songs %}
-                                <li class="songBullet">
+                                <li>
                                     <a href="songs/{{ song.safeName }}.html">{{ song.name }}</a>
                                 </li>
                                 {% endfor %}
                             </ul>
                         </td>
                         <td>
-                            <p id="cover"><a href="collections/{{ item.safeName }}.html"><img class="coverimg"
+                            <p id="cover"><a href="collections/{{ item.safeName }}.html"><img class="cover-image"
                                         src="artwork/{{ item.coverLink }}" width="200" height="200"></a></p>
                         </td>
                     </tr>
                     {% else %}
                     <tr>
-                        <td class="itemNameLarge">
-                            <p class="itemNameLarge"><a href="songs/{{ item.safeName }}.html">{{ item.name }}</a></p>
-                            <p class="singleText">(Single)</p>
+                        <td class="item-name-large">
+                            <p class="item-name-large"><a href="songs/{{ item.safeName }}.html">{{ item.name }}</a></p>
+                            <p class="single-text">(Single)</p>
                         </td>
                         <td>
-                            <p id="cover"><a href="songs/{{ item.safeName }}.html"><img class="coverimg"
+                            <p id="cover"><a href="songs/{{ item.safeName }}.html"><img class="cover-image"
                                         src="artwork/{{ item.coverLink }}" width="200" height="200"></a></p>
                         </td>
                     </tr>
@@ -116,11 +116,11 @@
 
         </div>
         <noscript>
-            <hr class="noscript_hr">
+            <hr class="noscript-hr">
         </noscript>
         <div id="other">
             <noscript>
-                <h2 class="noscript_heading">Other</h2>
+                <h2 class="noscript-heading">Other</h2>
             </noscript>
             <p><a href="games.html">Games</a></p>
             <p><a href="https://nitroguy10.github.io/ResistorTool/">ResistorTool</a></p>

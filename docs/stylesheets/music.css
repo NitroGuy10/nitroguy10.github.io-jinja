@@ -15,7 +15,7 @@ h1 {
     padding-bottom: 20px;
 }
 
-.longNameH1 {
+h1.long-name {
     font-size: 105px;
 }
 
@@ -39,7 +39,7 @@ table {
     border-collapse: collapse;
 }
 
-table.songTable {
+table.song-table {
     width: 100%;
     margin-top: 30px;
     border-collapse: collapse;
@@ -50,7 +50,7 @@ table.songTable {
 
 }
 
-table.linksTable {
+table.links-table {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
@@ -73,13 +73,13 @@ td {
     border-top: 1px solid #444444;
 }
 
-td.onCollectionPage {
+td.on-collection-page {
     padding-top: 30px;
 }
 
 
-td#songDesc1.onSongPage,
-td#songDesc2.onSongPage {
+td#song-desc-1.on-song-page,
+td#song-desc-2.on-song-page {
     border-top: none;
     padding: 12px;
 }
@@ -89,21 +89,21 @@ td#songDesc2.onSongPage {
     line-height: 10px;
 }
 
-.downloadLink {
+.download-link {
     line-height: 35px;
 }
 
-.downloadLinks {
+.download-links {
     font-size: 20px;
     line-height: 10px;
 }
 
-.otherLinks {
+.other-links {
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-.tableLinks {
+.table-links {
     font-size: 40px;
     width: 600px;
     margin-left: auto;
@@ -127,7 +127,7 @@ button {
     cursor: pointer;
 }
 
-.mainSite {
+.main-site {
     font-size: 36px;
 }
 
@@ -157,21 +157,12 @@ a:visited {
     text-align: center;
 }
 
-#monkey {
-    padding-left: 30px;
-}
-
-#songDesc1 {
+#song-desc-1 {
     padding-right: 15px;
 }
 
 #cover {
     margin-bottom: 0px;
-}
-
-iframe {
-    margin: 0px;
-    padding: 0px;
 }
 
 button:hover {
@@ -192,7 +183,7 @@ button:hover {
         line-height: 22vw;
     }
 
-    .longNameH1 {
+    .long-nameH1 {
         font-size: 9.5vw;
     }
 
@@ -210,7 +201,7 @@ button:hover {
         font-size: 4vw;
     }
 
-    .tableLinks {
+    .table-links {
         font-size: 5vw;
         width: 100%;
     }
@@ -220,7 +211,7 @@ button:hover {
         padding: 1vw;
     }
 
-    .gamesgif {
+    .games-gif {
         width: 98%
     }
 

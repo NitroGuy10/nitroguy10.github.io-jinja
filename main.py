@@ -1,6 +1,7 @@
-import json
+from json import load as load_json
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from datetime import date
+from subprocess import run
 
 
 # Make a string lowercase and remove/replace unusable characters
@@ -33,8 +34,10 @@ env = Environment(
 
 print("Hello, nitroguy10.github.io!")
 
-song_data = json.load(open("data/song_data.json"))
+print("Reading JSON...")
+song_data = load_json(open("data/song_data.json"))
 
+print("Parsing JSON...")
 
 # Fill in supplementary data for each song
 for collection in song_data["collections"].values():
@@ -62,6 +65,8 @@ collections_list = list(song_data["collections"].values())[2:]  # Excludes Singl
 chronological_list = collections_list + remixes_list + singles_list
 chronological_list = reversed(sorted(chronological_list, key=lambda item: get_release_date(item)))
 
+print("Rendering Jinja templates...")
+
 template = env.get_template("index.html.jinja")
 with open("docs/index.html", "w") as file:
     file.write(template.render(collections=reversed(song_data["collections"].values()),
@@ -76,3 +81,9 @@ template = env.get_template("song.html.jinja")
 for song in song_data["songs"].values():
     with open("docs/songs/" + song["safeName"] + ".html", "w") as file:
         file.write(template.render(song=song))
+
+# Compile Sass
+print("Compiling Sass...")
+run(["sass", "sass/main.sass", "docs/stylesheets/main_sass.css"])
+
+print("All done!")

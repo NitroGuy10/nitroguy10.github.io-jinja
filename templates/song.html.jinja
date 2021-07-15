@@ -26,13 +26,13 @@
     <h1>The Sass</h1>
     <div id="content">
         <div id="eachTrack">
-            <table id="songList" class="songTable">
+            <table id="songList" class="song-table">
                 <tr class="songInfo">
-                    <td id="songDesc1" class="onSongPage">
+                    <td id="song-desc-1" class="on-song-page">
                         <h4>{{ song.name }}</h4>
                         <p>{{ song.description }}</p>
                     </td>
-                    <td id="songDesc2" class="onSongPage">
+                    <td id="song-desc-2" class="on-song-page">
                         <p id="cover"><img src="../artwork/{{ song.coverLink }}" width="250" height="250"></p>
                         <h3>Released: {{ song.releaseDateFormatted }}</h3>
                         <h3>Genre: {{ song.genre }}</h3>
@@ -41,7 +41,7 @@
                         <hr>
                         <h3 class="download">Free Download: <p>
                                 {% for link in song.downloadLinks %}
-                                <a href="{{ song.downloadLinks[link].link }}" class="downloadLink" target="_blank">({{
+                                <a href="{{ song.downloadLinks[link].link }}" class="download-link" target="_blank">({{
                                     song.downloadLinks[link].type }})</a>
                                 {% endfor %}
                             </p>
@@ -49,13 +49,13 @@
                         <hr>
                         <h3>
                             {% if song.streamLinks.youtubeLink is defined %}
-                            <p class="otherLinks"><img src="../icons/youtube.png" width="32" height="32"><a
-                                    href="{{ song.streamLinks.youtubeLink.link }}" class="otherLinks" target="_blank">YouTube</a>
+                            <p class="other-links"><img src="../icons/youtube.png" width="32" height="32"><a
+                                    href="{{ song.streamLinks.youtubeLink.link }}" class="other-links" target="_blank">YouTube</a>
                             </p>
                             {% endif %}
                             {% if song.streamLinks.soundcloudLink is defined %}
-                            <p class="otherLinks"><img src="../icons/soundcloud.png" width="32" height="32"><a
-                                    href="{{ song.streamLinks.soundcloudLink.link }}" class="otherLinks"
+                            <p class="other-links"><img src="../icons/soundcloud.png" width="32" height="32"><a
+                                    href="{{ song.streamLinks.soundcloudLink.link }}" class="other-links"
                                     target="_blank">SoundCloud</a></p>
                             {% endif %}
                         </h3>
@@ -67,7 +67,7 @@
     <br>
     <br>
     <footer>
-        <a class="mainSite" href="../index.html#music">Main Site</a>
+        <a class="main-site" href="../index.html#music">Main Site</a>
     </footer>
     <footer>
         <a href="https://www.youtube.com/channel/UCoJpTVMgEBnrF0KzaRZlklQ"><img src="../icons/youtube.png" height="32px"
