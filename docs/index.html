@@ -25,9 +25,9 @@
 <body onload="start(); window.scrollTo(0, 0)">
     <h1>NitroGuy</h1>
     <p>
-        <noscript><a href="#about"></noscript><button onclick="openTab(0)">About</button><noscript></a></noscript>
-        <noscript><a href="#music"></noscript><button onclick="openTab(1)">Music</button><noscript></a></noscript>
-        <noscript><a href="#other"></noscript><button onclick="openTab(2)">Other</button><noscript></a></noscript>
+        <noscript><a href="#about"></noscript><button onclick="openTab(0)" id="aboutNavButton">About</button><noscript></a></noscript>
+        <noscript><a href="#music"></noscript><button onclick="openTab(1)" id="musicNavButton">Music</button><noscript></a></noscript>
+        <noscript><a href="#other"></noscript><button onclick="openTab(2)" id="otherNavButton">Other</button><noscript></a></noscript>
     </p>
     <div id="content">
         <div id="about">
@@ -293,9 +293,11 @@
             for (let i = 0; i < TABS.length; i++) {
                 if (i === page) {
                     document.getElementById(TABS[i].substring(1)).style.display = "block"
+                    document.getElementById(TABS[i].substring(1) + "NavButton").className = "current"
                 }
                 else {
                     document.getElementById(TABS[i].substring(1)).style.display = "none"
+                    document.getElementById(TABS[i].substring(1) + "NavButton").className = ""
                 }
 
             }

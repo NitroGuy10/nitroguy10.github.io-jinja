@@ -62,6 +62,10 @@ button {
     cursor: pointer;
 }
 
+button.current {
+    background-color: #171717;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
