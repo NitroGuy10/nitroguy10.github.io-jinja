@@ -79,7 +79,7 @@
                             </p>
                             <ul class="songBullets">
                                 {% for song in item.songs %}
-                                <li>
+                                <li class="songBullet">
                                     <a href="songs/{{ song.safeName }}.html">{{ song.name }}</a>
                                 </li>
                                 {% endfor %}

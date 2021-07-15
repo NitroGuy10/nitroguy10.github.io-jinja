@@ -45,6 +45,10 @@ ul {
     text-align: center;
 }
 
+.songBullet {
+    padding-bottom: 8px;
+}
+
 button {
     background-color: #252525;
     border: none;
@@ -177,6 +181,16 @@ button:hover {
 
     .itemNameLarge {
         font-size: 8vw;
+    }
+
+    .coverimg {
+        width: 25vw;
+        height: 25vw;
+    }
+
+    #musicLogo {
+        width: 25vw;
+        height: 25vw;
     }
 
     #content {
