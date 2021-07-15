@@ -40,8 +40,9 @@ ul {
     text-align: left;
 }
 
-.subBullet {
+.songBullets {
     font-size: 20px;
+    text-align: center;
 }
 
 button {
@@ -57,6 +58,18 @@ button {
     cursor: pointer;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+td {
+    font-size: 30px;
+    vertical-align: top;
+    border-top: 1px solid #444444;
+}
+
 a:link,
 a:visited {
     color: #00aaff;
@@ -66,8 +79,20 @@ a.whitelink {
     color: inherit;
 }
 
+.itemNameLarge {
+    font-size: 50px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.singleText {
+    font-size: 25px;
+    color:#666
+}
+
 .json {
-    font-size: 13px;
+    font-size: 24px;
+    text-align: center;
 }
 
 #email {
