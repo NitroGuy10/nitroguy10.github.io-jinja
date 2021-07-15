@@ -63,6 +63,13 @@ table {
     border-collapse: collapse;
 }
 
+.scrollTable {
+    overflow-y: scroll;
+    height: 800px;
+    background-color: #1A1A1A;
+    border: 1px solid #dddddd;
+}
+
 
 td {
     font-size: 30px;
@@ -91,7 +98,7 @@ a.whitelink {
 }
 
 .json {
-    font-size: 24px;
+    font-size: 25px;
     text-align: center;
 }
 
@@ -112,7 +119,7 @@ a.whitelink {
     text-align: center;
 }
 
-#monkey {
+#musicLogo {
     padding-left: 30px;
 }
 
@@ -154,6 +161,22 @@ button:hover {
 
     .gamesgif {
         width: 98%
+    }
+    
+    .songBullets {
+        font-size: 5vw;
+    }
+
+    .singleText {
+        font-size: 5vw;
+    }
+
+    .json {
+        font-size: 5vw;
+    }
+
+    .itemNameLarge {
+        font-size: 8vw;
     }
 
     #content {
