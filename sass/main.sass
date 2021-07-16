@@ -1,8 +1,12 @@
+// Variables
+
 $main-font: Tomorrow, Arial, Helvetica, sans-serif
 $text-color: #ddd
 
 $background-color: #121212
 $title-background-color: #333
+
+// Document-wide
 
 body
     font-family: $main-font
@@ -11,6 +15,8 @@ body
     margin: 0px
     text-align: center
     overflow-y: scroll
+
+// Headings
 
 h1
     font-size: 150px
@@ -22,3 +28,107 @@ h1
     &.long-name
         font-size: 120px
 
+.noscript-heading
+    font-size: 60px
+    line-height: 20px
+    margin: 0px
+    padding-bottom: 20px
+    text-align: center
+
+// Paragraphs, links, and other text
+
+p
+    font-size: 30px
+
+a
+    &:link, &:visited
+        color: #00aaff
+    
+    &.white-link
+        color: inherit
+
+.item-name-large
+    font-size: 50px
+    text-align: center
+    vertical-align: middle
+
+.single-text
+    font-size: 25px
+    color: #666
+
+#json
+    font-size: 25px
+    text-align: center
+
+#email
+    font-size: 12px
+
+#copyright
+    padding-top: 15px
+    padding-bottom: 3px
+
+// Lists
+
+ul
+    font-size: 35px
+    text-align: left
+
+    &.song-bullets
+        font-size: 20px
+        text-align: center
+
+        li
+            padding-bottom: 8px
+
+// Tables
+
+table
+    width: 100%
+    border-collapse: collapse
+
+td
+    font-size: 30px
+    vertical-align: top
+    border-top: 1px solid #444444
+
+.scroll-table 
+    overflow-y: scroll
+    height: 800px
+    background-color: #1A1A1A
+    border: 1px solid #dddddd
+
+// Images
+
+#music-logo
+    padding-left: 30px
+
+// Miscellaneous
+
+.noscript-hr
+    margin-bottom: 40px
+
+button
+    background-color: #252525
+    border: none
+    padding: 15px
+    text-align: center
+    text-decoration: none
+    display: inline-block
+    font-size: 40px
+    font-family: "Tomorrow", sans-serif
+    color: #bbbbbb
+    cursor: pointer
+
+    &:hover
+        background-color: #171717
+
+    &.current
+        background-color: #171717
+
+#games, #other 
+    text-align: center
+
+#content
+    text-align: justify
+    margin-left: 20%
+    margin-right: 20%
