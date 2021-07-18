@@ -129,4 +129,53 @@ button.current {
   margin-right: 20%;
 }
 
+@media only screen and (max-width: 1000px) {
+  h1 {
+    font-size: 20vw;
+    line-height: 22vw;
+  }
+  h1.long-name {
+    font-size: 17vw;
+  }
+
+  p {
+    font-size: 4vw;
+  }
+
+  .item-name-large {
+    font-size: 8vw;
+  }
+
+  .single-text {
+    font-size: 5vw;
+  }
+
+  #json {
+    font-size: 5vw;
+  }
+
+  ul.song-bullets {
+    font-size: 5vw;
+  }
+
+  .games-gif {
+    width: 98%;
+  }
+
+  .cover-image, #music-logo {
+    width: 25vw;
+    height: 25vw;
+  }
+
+  button {
+    font-size: 5vw;
+    padding: 1vw;
+  }
+
+  #content {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
 /*# sourceMappingURL=main_sass.css.map */

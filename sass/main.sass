@@ -1,17 +1,9 @@
-// Variables
-
-$main-font: Tomorrow, Arial, Helvetica, sans-serif
-$text-color: #ddd
-
-$background-color: #121212
-$title-background-color: #333
-
 // Document-wide
 
 body
-    font-family: $main-font
-    color: $text-color
-    background-color: $background-color
+    font-family: Tomorrow, Arial, Helvetica, sans-serif
+    color: #ddd
+    background-color: #121212
     margin: 0px
     text-align: center
     overflow-y: scroll
@@ -20,7 +12,7 @@ body
 
 h1
     font-size: 150px
-    background-color: $title-background-color
+    background-color: #333
     line-height: 180px
     margin: 0px
     padding-bottom: 20px
@@ -35,6 +27,14 @@ h1
     padding-bottom: 20px
     text-align: center
 
+@mixin m-headings
+    h1
+        font-size: 20vw
+        line-height: 22vw
+
+        &.long-name
+            font-size: 17vw
+
 // Paragraphs, links, and other text
 
 p
@@ -43,7 +43,7 @@ p
 a
     &:link, &:visited
         color: #00aaff
-    
+
     &.white-link
         color: inherit
 
@@ -67,6 +67,19 @@ a
     padding-top: 15px
     padding-bottom: 3px
 
+@mixin m-text
+    p
+        font-size: 4vw
+
+    .item-name-large
+        font-size: 8vw
+
+    .single-text
+        font-size: 5vw
+
+    #json
+        font-size: 5vw
+
 // Lists
 
 ul
@@ -80,6 +93,10 @@ ul
         li
             padding-bottom: 8px
 
+@mixin m-lists
+    ul.song-bullets
+        font-size: 5vw
+
 // Tables
 
 table
@@ -91,7 +108,7 @@ td
     vertical-align: top
     border-top: 1px solid #444444
 
-.scroll-table 
+.scroll-table
     overflow-y: scroll
     height: 800px
     background-color: #1A1A1A
@@ -101,6 +118,14 @@ td
 
 #music-logo
     padding-left: 30px
+
+@mixin m-images
+    .games-gif
+        width: 98%
+
+    .cover-image, #music-logo
+        width: 25vw
+        height: 25vw
 
 // Miscellaneous
 
@@ -125,10 +150,28 @@ button
     &.current
         background-color: #171717
 
-#games, #other 
+#games, #other
     text-align: center
 
 #content
     text-align: justify
     margin-left: 20%
     margin-right: 20%
+
+@mixin m-misc
+    button
+        font-size: 5vw
+        padding: 1vw
+
+    #content
+        margin-left: 5%
+        margin-right: 5%
+
+// Media queries for mobile
+
+@media only screen and (max-width: 1000px)
+    @include m-headings
+    @include m-text
+    @include m-lists
+    @include m-images
+    @include m-misc
