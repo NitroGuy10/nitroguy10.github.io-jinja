@@ -1,7 +1,11 @@
+// Variables
+
+$main-font: Tomorrow, Arial, Helvetica, sans-serif
+
 // Document-wide
 
 body
-    font-family: Tomorrow, Arial, Helvetica, sans-serif
+    font-family: $main-font
     color: #ddd
     background-color: #121212
     margin: 0px
@@ -18,7 +22,19 @@ h1
     padding-bottom: 20px
 
     &.long-name
-        font-size: 120px
+        font-size: 105px
+
+h2
+    font-size: 75px
+
+h3
+    font-size: 15px
+    text-align: left
+
+h4
+    font-size: 70px
+    text-align: left
+    margin: 0px
 
 .noscript-heading
     font-size: 60px
@@ -35,6 +51,16 @@ h1
         &.long-name
             font-size: 17vw
 
+        &.music-name
+            font-size: 14vw
+
+    h2, h4
+        font-size: 10vw
+        line-height: 10vw
+    
+    h3
+        font-size: 2.5vw
+
 // Paragraphs, links, and other text
 
 p
@@ -47,6 +73,27 @@ a
     &.white-link
         color: inherit
 
+.download
+    font-size: 30px
+    line-height: 10px
+
+    &-link
+        line-height: 35px
+
+    &-links
+        font-size: 20px
+        line-height: 10px
+
+.other-links
+    margin-top: 10px
+    margin-bottom: 10px
+
+.table-links
+    font-size: 40px
+    width: 600px
+    margin-left: auto
+    margin-right: auto
+
 .item-name-large
     font-size: 50px
     text-align: center
@@ -55,6 +102,9 @@ a
 .single-text
     font-size: 25px
     color: #666
+
+.main-site
+    font-size: 36px
 
 #json
     font-size: 25px
@@ -76,9 +126,26 @@ a
 
     .single-text
         font-size: 5vw
+    
+    .table-links
+        font-size: 5vw
+        width: 100%
+    
+    .download
+        font-size: 5vw
+        line-height: 5vw
+        margin: 5px
+    
+    .other-links
+        font-size: 3vw
 
     #json
         font-size: 5vw
+    
+    .on-collection-page
+        .song-name
+            font-size: 6vw
+
 
 // Lists
 
@@ -103,10 +170,38 @@ table
     width: 100%
     border-collapse: collapse
 
+    &.song-table
+        width: 100%
+        margin-top: 30px
+        border-collapse: collapse
+        background-color: #222222
+        border-style: solid
+        border-color: #000000
+        box-shadow: 2px 2px 10px 2px #000000
+
+    &.links-table
+        width: 60%
+        margin-left: auto
+        margin-right: auto
+        margin-top: 30px
+        border-collapse: collapse
+        background-color: #222222
+        border-style: solid
+        border-color: #000000
+        box-shadow: 2px 2px 10px 2px #000000
+        text-align: center
+
 td
     font-size: 30px
     vertical-align: top
     border-top: 1px solid #444444
+
+    &.on-collection-page
+        padding-top: 30px
+
+    &#song-desc-1.on-song-page, &#song-desc-2.on-song-page
+        border-top: none
+        padding: 12px
 
 .scroll-table
     overflow-y: scroll
@@ -114,10 +209,16 @@ td
     background-color: #1A1A1A
     border: 1px solid #dddddd
 
+#song-desc-1
+    padding-right: 15px
+
 // Images
 
 #music-logo
     padding-left: 30px
+
+#cover
+    margin-bottom: 0px
 
 @mixin m-images
     .games-gif
@@ -126,6 +227,15 @@ td
     .cover-image, #music-logo
         width: 25vw
         height: 25vw
+    
+    .on-song-page
+        .cover-image
+            width: 100%
+            height: 100%
+    
+    .social-icon-scale
+        width: 5vw
+        height: 5vw
 
 // Miscellaneous
 
@@ -140,7 +250,7 @@ button
     text-decoration: none
     display: inline-block
     font-size: 40px
-    font-family: "Tomorrow", sans-serif
+    font-family: $main-font
     color: #bbbbbb
     cursor: pointer
 
@@ -167,9 +277,12 @@ button
         margin-left: 5%
         margin-right: 5%
 
+        &.music-page
+            text-align: left
+
 // Media queries for mobile
 
-@media only screen and (max-width: 1000px)
+@media only screen and (max-width: 1100px)
     @include m-headings
     @include m-text
     @include m-lists
