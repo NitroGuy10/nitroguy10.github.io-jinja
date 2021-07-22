@@ -32,6 +32,20 @@ env = Environment(
     autoescape=select_autoescape()
 )
 
+
+# Create a dictionary of site-wide information
+def get_site(path_to_root):
+    site_ = {}
+
+    template_ = env.get_template("components/head.html.jinja")
+    site_["head"] = template_.render(path=path_to_root)
+
+    template_ = env.get_template("components/footer.html.jinja")
+    site_["footer"] = template_.render(path=path_to_root)
+
+    return site_
+
+
 print("Hello, nitroguy10.github.io!")
 
 print("Reading JSON...")
@@ -65,19 +79,9 @@ collections_list = list(song_data["collections"].values())[2:]  # Excludes Singl
 chronological_list = collections_list + remixes_list + singles_list
 chronological_list = reversed(sorted(chronological_list, key=lambda item: get_release_date(item)))
 
-print("Rendering Jinja templates (components)...")
+print("Rendering Jinja templates...")
 
-# Create a dictionary of site-wide information
-site = {}
-
-template = env.get_template("components/head.html.jinja")
-site["head"] = template.render()
-
-template = env.get_template("components/footer.html.jinja")
-site["footer"] = template.render()
-
-print("Rendering Jinja templates (webpages)...")
-
+site = get_site("")
 template = env.get_template("index.html.jinja")
 with open("docs/index.html", "w") as file:
     file.write(template.render(collections=reversed(song_data["collections"].values()),
@@ -87,11 +91,13 @@ template = env.get_template("links.html.jinja")
 with open("docs/links.html", "w") as file:
     file.write(template.render(site=site))
 
+site = get_site("../")
 template = env.get_template("collection.html.jinja")
 for collection in song_data["collections"].values():
     with open("docs/collections/" + collection["safeName"] + ".html", "w") as file:
         file.write(template.render(collection=collection, site=site))
 
+site = get_site("../")
 template = env.get_template("song.html.jinja")
 for song in song_data["songs"].values():
     with open("docs/songs/" + song["safeName"] + ".html", "w") as file:
