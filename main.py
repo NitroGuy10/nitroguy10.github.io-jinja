@@ -26,30 +26,32 @@ def format_date(date_string):
                                 " December "][int(date_parts[1]) - 1] + date_parts[2]
 
 
+# Create a dictionary of site-wide information
+def get_site(path_to_root):
+    site_ = {}
+
+    site_["nitroguy"] = nitroguy
+
+    template_ = env.get_template("components/head.html.jinja")
+    site_["head"] = template_.render(path=path_to_root, nitroguy=nitroguy)
+
+    template_ = env.get_template("components/footer.html.jinja")
+    site_["footer"] = template_.render(path=path_to_root, nitroguy=nitroguy)
+
+    return site_
+
+
 # Set up Jinja environment
 env = Environment(
     loader=FileSystemLoader("templates"),
     autoescape=select_autoescape()
 )
 
-
-# Create a dictionary of site-wide information
-def get_site(path_to_root):
-    site_ = {}
-
-    template_ = env.get_template("components/head.html.jinja")
-    site_["head"] = template_.render(path=path_to_root)
-
-    template_ = env.get_template("components/footer.html.jinja")
-    site_["footer"] = template_.render(path=path_to_root)
-
-    return site_
-
-
 print("Hello, nitroguy10.github.io!")
 
 print("Reading JSON...")
 song_data = load_json(open("data/song_data.json"))
+nitroguy = load_json(open("data/nitroguy.json"))
 
 print("Parsing JSON...")
 

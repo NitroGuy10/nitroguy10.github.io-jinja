@@ -22,7 +22,8 @@
                         <p>{{ song.description }}</p>
                     </td>
                     <td id="song-desc-2" class="on-song-page">
-                        <p class="cover"><img src="../artwork/{{ song.coverLink }}" class="cover-image" width="250" height="250"></p>
+                        <p class="cover"><img src="../artwork/{{ song.coverLink }}" class="cover-image" width="250"
+                                height="250"></p>
                         <h3>Released: {{ song.releaseDateFormatted }}</h3>
                         <h3>Genre: {{ song.genre }}</h3>
                         <h3>Collection: <a href="../collections/{{ song.safeCollection }}.html">{{ song.collection
@@ -38,14 +39,15 @@
                         <hr>
                         <h3>
                             {% if song.streamLinks.youtubeLink is defined %}
-                            <p class="other-links"><img src="../icons/youtube.png" width="32" height="32" class="social-icon-scale"><a
-                                    href="{{ song.streamLinks.youtubeLink.link }}" class="other-links" target="_blank">YouTube</a>
+                            <p class="other-links"><img src="../{{ site.nitroguy.socials.youtube.icon }}" width="32" height="32"
+                                    class="social-icon-scale"><a href="{{ song.streamLinks.youtubeLink.link }}"
+                                    class="other-links" target="_blank">YouTube</a>
                             </p>
                             {% endif %}
                             {% if song.streamLinks.soundcloudLink is defined %}
-                            <p class="other-links"><img src="../icons/soundcloud.png" width="32" height="32" class="social-icon-scale"><a
-                                    href="{{ song.streamLinks.soundcloudLink.link }}" class="other-links"
-                                    target="_blank">SoundCloud</a></p>
+                            <p class="other-links"><img src="../{{ site.nitroguy.socials.soundcloud.icon }}" width="32" height="32"
+                                    class="social-icon-scale"><a href="{{ song.streamLinks.soundcloudLink.link }}"
+                                    class="other-links" target="_blank">SoundCloud</a></p>
                             {% endif %}
                         </h3>
                     </td>

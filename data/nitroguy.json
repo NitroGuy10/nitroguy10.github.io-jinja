@@ -1,0 +1,30 @@
+{
+    "socials": {
+        "website": {
+            "link": "https://nitroguy10.github.io"
+        },
+        "email": {
+            "address": "nitroguysm(at)gmail.com"
+        },
+        "soundcloud": {
+            "link": "https://soundcloud.com/the-sass-music",
+            "icon": "icons/soundcloud.png"
+        },
+        "youtube": {
+            "link": "https://www.youtube.com/TheSassMusic",
+            "icon": "icons/youtube.png"
+        },
+        "github": {
+            "link": "https://github.com/NitroGuy10",
+            "icon": "icons/github.png"
+        },
+        "twitter": {
+            "link": "https://twitter.com/NitroGuy10",
+            "icon": "icons/twitter.png"
+        },
+        "newgrounds": {
+            "link": "https://thesassmusic.newgrounds.com/",
+            "icon": "icons/newgrounds.png"
+        }
+    }
+}
