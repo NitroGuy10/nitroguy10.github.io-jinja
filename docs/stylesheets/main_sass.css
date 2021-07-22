@@ -167,12 +167,15 @@ td#song-desc-1.on-song-page, td#song-desc-2.on-song-page {
   padding-right: 15px;
 }
 
-#music-logo {
-  padding-left: 30px;
+.cover {
+  margin-bottom: 0px;
+}
+.cover-index {
+  margin-bottom: 30px;
 }
 
-#cover {
-  margin-bottom: 0px;
+#music-logo {
+  padding-left: 30px;
 }
 
 .noscript-hr {

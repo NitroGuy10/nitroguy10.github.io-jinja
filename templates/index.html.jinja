@@ -7,19 +7,8 @@
 <head>
     <title>NitroGuy</title>
 
-    <meta charset="UTF-8">
     <meta name="description" content="NitroGuy's Website">
-    <meta name="author" content="NitroGuy/NitroGuy10/The Sass">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
-
-    <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="stylesheets/main_sass.css">
-
+    {{ site.head }}
 </head>
 
 <body onload="start(); window.scrollTo(0, 0)">
@@ -86,7 +75,7 @@
                             </ul>
                         </td>
                         <td>
-                            <p id="cover"><a href="collections/{{ item.safeName }}.html"><img class="cover-image"
+                            <p class="cover-index"><a href="collections/{{ item.safeName }}.html"><img class="cover-image"
                                         src="artwork/{{ item.coverLink }}" width="200" height="200"></a></p>
                         </td>
                     </tr>
@@ -97,7 +86,7 @@
                             <p class="single-text">(Single)</p>
                         </td>
                         <td>
-                            <p id="cover"><a href="songs/{{ item.safeName }}.html"><img class="cover-image"
+                            <p class="cover-index"><a href="songs/{{ item.safeName }}.html"><img class="cover-image"
                                         src="artwork/{{ item.coverLink }}" width="200" height="200"></a></p>
                         </td>
                     </tr>
@@ -128,18 +117,8 @@
             <p><a href="https://nitroguy10.github.io/ClickType/">ClickType</a></p>
         </div>
     </div>
-    <footer>
-        <a href="https://www.youtube.com/channel/UCoJpTVMgEBnrF0KzaRZlklQ"><img src="icons/youtube.png" height="32px"
-                width="32px" title="YouTube" alt="YouTube" class="social-icon"></a>
-        <a href="https://soundcloud.com/the-sass-music"><img src="icons/soundcloud.png" height="32px" width="32px"
-                title="SoundCloud" alt="SoundCloud" class="social-icon"></a>
-        <a href="https://github.com/NitroGuy10"><img src="icons/github.png" height="32px" width="32px" title="GitHub"
-                alt="GitHub" class="social-icon"></a>
-        <a href="https://twitter.com/NitroGuy10"><img src="icons/twitter.png" height="32px" width="32px" title="Twitter"
-                alt="Twitter" class="social-icon"></a>
-        <div id="email" title="E-Mail">nitroguysm(at)gmail.com</div>
-    </footer>
-    <footer id="copyright">&copy; 2021 NitroGuy</footer>
+
+    {{ site.footer }}
 
     <script>
         const TABS = ["#about", "#music", "#other"]

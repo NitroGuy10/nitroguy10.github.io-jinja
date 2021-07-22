@@ -65,22 +65,37 @@ collections_list = list(song_data["collections"].values())[2:]  # Excludes Singl
 chronological_list = collections_list + remixes_list + singles_list
 chronological_list = reversed(sorted(chronological_list, key=lambda item: get_release_date(item)))
 
-print("Rendering Jinja templates...")
+print("Rendering Jinja templates (components)...")
+
+# Create a dictionary of site-wide information
+site = {}
+
+template = env.get_template("components/head.html.jinja")
+site["head"] = template.render()
+
+template = env.get_template("components/footer.html.jinja")
+site["footer"] = template.render()
+
+print("Rendering Jinja templates (webpages)...")
 
 template = env.get_template("index.html.jinja")
 with open("docs/index.html", "w") as file:
     file.write(template.render(collections=reversed(song_data["collections"].values()),
-                               chronological_list=chronological_list))
+                               chronological_list=chronological_list, site=site))
+
+template = env.get_template("links.html.jinja")
+with open("docs/links.html", "w") as file:
+    file.write(template.render(site=site))
 
 template = env.get_template("collection.html.jinja")
 for collection in song_data["collections"].values():
     with open("docs/collections/" + collection["safeName"] + ".html", "w") as file:
-        file.write(template.render(collection=collection))
+        file.write(template.render(collection=collection, site=site))
 
 template = env.get_template("song.html.jinja")
 for song in song_data["songs"].values():
     with open("docs/songs/" + song["safeName"] + ".html", "w") as file:
-        file.write(template.render(song=song))
+        file.write(template.render(song=song, site=site))
 
 # Compile Sass
 print("Compiling Sass...")
