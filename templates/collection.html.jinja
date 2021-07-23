@@ -22,6 +22,24 @@
         <div id="about">
             <p>{{ collection.description }}</p>
         </div>
+        <div id="collection-links">
+            {% if collection.streamLinks.youtubeLink is defined %}
+            <p class="collection-link"><img src="../{{ site.nitroguy.socials.youtube.icon }}" width="32" height="32"
+                    class="social-icon-scale"><a href="{{ collection.streamLinks.youtubeLink.link }}" class="collection-link"
+                    target="_blank">YouTube</a>
+            </p>
+            {% endif %}
+            {% if collection.streamLinks.soundcloudLink is defined %}
+            <p class="collection-link"><img src="../{{ site.nitroguy.socials.soundcloud.icon }}" width="32" height="32"
+                    class="social-icon-scale"><a href="{{ collection.streamLinks.soundcloudLink.link }}" class="collection-link"
+                    target="_blank">SoundCloud</a></p>
+            {% endif %}
+            {% if collection.streamLinks.newgroundsLink is defined %}
+            <p class="collection-link"><img src="../{{ site.nitroguy.socials.newgrounds.icon }}" width="32" height="32"
+                    class="social-icon-scale"><a href="{{ collection.streamLinks.newgroundsLink.link }}" class="collection-link"
+                    target="_blank">Newgrounds</a></p>
+            {% endif %}
+        </div>
         <div id="eachTrack">
             <table id="songList">
                 {% for song in collection.songs %}

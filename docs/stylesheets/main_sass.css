@@ -69,6 +69,11 @@ a.white-link {
   margin-bottom: 10px;
 }
 
+.collection-link {
+  font-size: 35px;
+  text-align: center;
+}
+
 .table-links {
   font-size: 40px;
   width: 600px;
