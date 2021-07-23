@@ -49,6 +49,11 @@
                                     class="social-icon-scale"><a href="{{ song.streamLinks.soundcloudLink.link }}"
                                     class="other-links" target="_blank">SoundCloud</a></p>
                             {% endif %}
+                            {% if song.streamLinks.newgroundsLink is defined %}
+                            <p class="other-links"><img src="../{{ site.nitroguy.socials.newgrounds.icon }}" width="32" height="32"
+                                    class="social-icon-scale"><a href="{{ song.streamLinks.newgroundsLink.link }}"
+                                    class="other-links" target="_blank">Newgrounds</a></p>
+                            {% endif %}
                         </h3>
                     </td>
                 </tr>

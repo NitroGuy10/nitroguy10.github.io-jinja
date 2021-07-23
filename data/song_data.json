@@ -829,6 +829,10 @@
             "soundcloudLink": {
                "type": "SoundCloud",
                "link": "https://soundcloud.com/the-sass-music/jump"
+            },
+            "newgroundsLink": {
+               "type": "Newgrounds",
+               "link": "https://www.newgrounds.com/audio/listen/1058829"
             }
          },
          "collection": "Singles"
@@ -857,6 +861,10 @@
             "soundcloudLink": {
                "type": "SoundCloud",
                "link": "https://soundcloud.com/the-sass-music/neddie-figment-the-sass-remix"
+            },
+            "newgroundsLink": {
+               "type": "Newgrounds",
+               "link": "https://www.newgrounds.com/audio/listen/1058831"
             }
          },
          "collection": "Remixes"
