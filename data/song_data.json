@@ -848,6 +848,10 @@
             }
          },
          "streamLinks": {
+            "youtubeLink": {
+               "type": "YouTube",
+               "link": "https://youtu.be/Q06bddUG8gU"
+            },
             "soundcloudLink": {
                "type": "SoundCloud",
                "link": "https://soundcloud.com/the-sass-music/jump"
