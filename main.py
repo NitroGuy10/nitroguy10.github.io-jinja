@@ -28,9 +28,7 @@ def format_date(date_string):
 
 # Create a dictionary of site-wide information
 def get_site(path_to_root):
-    site_ = {}
-
-    site_["nitroguy"] = nitroguy
+    site_ = {"nitroguy": nitroguy}
 
     template_ = env.get_template("components/head.html.jinja")
     site_["head"] = template_.render(path=path_to_root, nitroguy=nitroguy)
@@ -91,6 +89,14 @@ with open("docs/index.html", "w") as file:
 
 template = env.get_template("links.html.jinja")
 with open("docs/links.html", "w") as file:
+    file.write(template.render(site=site))
+
+template = env.get_template("projects.html.jinja")
+with open("docs/projects.html", "w") as file:
+    file.write(template.render(site=site))
+
+template = env.get_template("about_website.html.jinja")
+with open("docs/about_website.html", "w") as file:
     file.write(template.render(site=site))
 
 site = get_site("../")

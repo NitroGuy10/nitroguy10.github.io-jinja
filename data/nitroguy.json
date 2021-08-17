@@ -30,7 +30,7 @@
         },
         "newgrounds": {
             "type": "Newgrounds",
-            "link": "https://thesassmusic.newgrounds.com/",
+            "link": "https://thesassmusic.newgrounds.com",
             "icon": "icons/newgrounds.png"
         }
     }
