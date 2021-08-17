@@ -105,7 +105,6 @@ for collection in song_data["collections"].values():
     with open("docs/collections/" + collection["safeName"] + ".html", "w") as file:
         file.write(template.render(collection=collection, site=site))
 
-site = get_site("../")
 template = env.get_template("song.html.jinja")
 for song in song_data["songs"].values():
     with open("docs/songs/" + song["safeName"] + ".html", "w") as file:
