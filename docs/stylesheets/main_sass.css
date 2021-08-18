@@ -28,6 +28,9 @@ h2#article-title {
   text-align: center;
   margin-bottom: 10px;
 }
+h2.article-subsection {
+  font-size: 50px;
+}
 
 h3 {
   font-size: 15px;
@@ -194,6 +197,12 @@ td#song-desc-1.on-song-page, td#song-desc-2.on-song-page {
   padding-left: 30px;
 }
 
+.article-image-intext {
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
 .noscript-hr {
   margin-bottom: 40px;
 }
@@ -246,6 +255,9 @@ button.current {
   h2#article-title {
     text-align: center;
     margin-bottom: 1vw;
+  }
+  h2.article-subsection {
+    font-size: 8vw;
   }
 
   h4 {
