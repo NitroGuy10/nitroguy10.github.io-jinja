@@ -2,6 +2,7 @@ from json import load as load_json
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from datetime import date
 from subprocess import run
+from os import scandir, path
 
 
 # Make a string lowercase and remove/replace unusable characters
@@ -91,23 +92,23 @@ template = env.get_template("links.html.jinja")
 with open("docs/links.html", "w") as file:
     file.write(template.render(site=site))
 
-template = env.get_template("projects.html.jinja")
-with open("docs/projects.html", "w") as file:
-    file.write(template.render(site=site))
-
-template = env.get_template("about_website.html.jinja")
-with open("docs/about_website.html", "w") as file:
-    file.write(template.render(site=site))
-
+# Render articles
 site = get_site("../")
+for article_template in scandir("templates/articles/"):
+    if article_template.name.endswith(".html.jinja"):
+        template = env.get_template(path.join("articles/", article_template.name))
+        with open(path.join("docs/articles/", article_template.name[:-6]), "w") as file:
+            file.write(template.render(site=site))
+
+# Render music templates
 template = env.get_template("collection.html.jinja")
 for collection in song_data["collections"].values():
-    with open("docs/collections/" + collection["safeName"] + ".html", "w") as file:
+    with open(path.join("docs/collections/", collection["safeName"] + ".html"), "w") as file:
         file.write(template.render(collection=collection, site=site))
 
 template = env.get_template("song.html.jinja")
 for song in song_data["songs"].values():
-    with open("docs/songs/" + song["safeName"] + ".html", "w") as file:
+    with open(path.join("docs/songs/", song["safeName"] + ".html"), "w") as file:
         file.write(template.render(song=song, site=site))
 
 # Compile Sass

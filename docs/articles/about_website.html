@@ -8,7 +8,18 @@
     <title>NitroGuy</title>
 
     <meta name="description" content="How NitroGuy's website was made">
-    {{ site.head }}
+    <meta charset="UTF-8">
+
+    <meta name="author" content="NitroGuy/NitroGuy10/The Sass">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/site.webmanifest">
+
+    <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/main_sass.css">
 </head>
 
 <body id="article">
@@ -33,7 +44,7 @@
             non-static site at all.
         </p>
         <p>
-            <img src="images/about_website/website_terminal.png" alt="I use a Python script to generate my website"
+            <img src="../images/about_website/website_terminal.png" alt="I use a Python script to generate my website"
                 style="width: 70%;">
         </p>
         <p>
@@ -50,7 +61,7 @@
             <li>Each page needed look the same. What if I decided to update the layout later on?</li>
             <li>It needed to be FUTURE-PROOF. What if I made a new song or collection?</li>
         </ol>
-        <img src="images/about_website/old_script.png" alt="My old solution to this involved lots of rather silly JavaScript"
+        <img src="../images/about_website/old_script.png" alt="My old solution to this involved lots of rather silly JavaScript"
             style="width: 100%;">
         <p>
             My old way of dealing with this was a mess. I essentially had HTML files containing a big script that
@@ -66,10 +77,10 @@
             JSON file. Past me couldn't figure out how the heck to get my scripts to read JSON so instead I opted to
             DECLARE A 2X2 ARRAY OF OBJECTS, INDEX BY INDEX, IN A JAVASCRIPT FILE........ Yeah, I'm glad I decided to
             change <a
-                href="{{ site.nitroguy.socials.github.link }}/nitroguy10.github.io/blob/a64279dd4eacce431d23bb2f548447b3d73da22d/js/song_data.js">all
+                href="https://github.com/NitroGuy10/nitroguy10.github.io/blob/a64279dd4eacce431d23bb2f548447b3d73da22d/js/song_data.js">all
                 that.</a>
         </p>
-        <img src="images/about_website/song_data_json.png" alt="All of my song data is kept in a JSON file" style="width: 50%;">
+        <img src="../images/about_website/song_data_json.png" alt="All of my song data is kept in a JSON file" style="width: 50%;">
         <p>
             Oh yeah, all the data for my songs is stored in a single JSON file (at least NOW it is *shudders*).
             I'm really happy to be doing this as it not only serves as the central database from which my webpages
@@ -83,7 +94,7 @@
             He suggested I use a "static site generator"&mdash;something I had never heard of.
             After playing around with a couple (one) of them, I realized they generally weren't made to generate
             webpages from data files, which was what I needed. So, I decided to create my own static site generator
-            called <a href="{{ site.nitroguy.socials.github.link }}/tuscon">tuscon</a>. After ten-or-so days and finally
+            called <a href="https://github.com/NitroGuy10/tuscon">tuscon</a>. After ten-or-so days and finally
             using
             recursion for something after like 2 years, it was done. And then- wait. Is tuscon a "static site generator"
             or a "templating" library.
@@ -92,7 +103,7 @@
         <p>
             . . . . . . . . . . . Templating was what I was looking for.
         </p>
-        <img src="images/about_website/jinja_template.png" alt="Using Jinja templates was a much cleaner solution"
+        <img src="../images/about_website/jinja_template.png" alt="Using Jinja templates was a much cleaner solution"
             style="width: 90%;">
         <p>
             Holy cow can your life be such a pain when you don't know the right search term for something, but I
@@ -103,7 +114,7 @@
             "songs" and one for "collections" and render them multiple times. I could even (finally) properly read the
             data from a JSON file with Python and fill in the templates using a "for-each" situation.
         </p>
-        <img src="images/about_website/python_jinja_rendering.png"
+        <img src="../images/about_website/python_jinja_rendering.png"
             alt="My Jinja templates are rendered in a Python script using data from a JSON file" style="width: 80%;">
         <p>
             So that's how I arrived at this solution for my website. I <em>"compile"</em> the site if I decide to update
@@ -114,7 +125,7 @@
             social media links into a JSON file and fill them in with Jinja. I even did that with the tuscon link you
             saw earlier!
         </p>
-        <img src="images/about_website/sass_mixins.png" alt="I use mixins in Sass to make managing media queries easier and cleaner"
+        <img src="../images/about_website/sass_mixins.png" alt="I use mixins in Sass to make managing media queries easier and cleaner"
             style="width: 40%;">
         <p>
             Compiling this website with a script also made using a CSS preprocessor more accessible.
@@ -137,10 +148,23 @@
     </div>
 
     <footer>
-        <a class="main-site" href="index.html">Main Site</a>
+        <a class="main-site" href="../index.html">Main Site</a>
     </footer>
 
-    {{ site.footer }}
+    <footer>
+        <a href="https://www.youtube.com/TheSassMusic"><img src="../icons/youtube.png"
+                        height="32px" width="32px" title="YouTube" alt="YouTube" class="social-icon"></a>
+        <a href="https://soundcloud.com/the-sass-music"><img src="../icons/soundcloud.png"
+                        height="32px" width="32px" title="SoundCloud" alt="SoundCloud" class="social-icon"></a>
+        <a href="https://github.com/NitroGuy10"><img src="../icons/github.png"
+                        height="32px" width="32px" title="GitHub" alt="GitHub" class="social-icon"></a>
+        <a href="https://twitter.com/NitroGuy10"><img src="../icons/twitter.png"
+                        height="32px" width="32px" title="Twitter" alt="Twitter" class="social-icon"></a>
+        <a href="https://thesassmusic.newgrounds.com"><img src="../icons/newgrounds.png"
+                        height="32px" width="32px" title="Newgrounds" alt="Newgrounds" class="social-icon"></a>
+        <div id="email" title="E-Mail">nitroguysm(at)gmail.com</div>
+    </footer>
+    <footer id="copyright">&copy; 2021 NitroGuy</footer>
 </body>
 
 </html>
