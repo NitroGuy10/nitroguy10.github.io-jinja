@@ -30,11 +30,16 @@ h2#article-title {
 }
 h2.article-subsection {
   font-size: 50px;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 h3 {
   font-size: 15px;
   text-align: left;
+}
+h3.article-subtitle {
+  font-size: 25px;
 }
 
 h4 {
@@ -258,6 +263,12 @@ button.current {
   }
   h2.article-subsection {
     font-size: 8vw;
+    margin-top: 4vw;
+    margin-bottom: 3vw;
+  }
+
+  h3.article-subtitle {
+    font-size: 4vw;
   }
 
   h4 {
