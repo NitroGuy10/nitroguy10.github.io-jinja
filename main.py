@@ -92,6 +92,10 @@ template = env.get_template("links.html.jinja")
 with open("docs/links.html", "w") as file:
     file.write(template.render(site=site))
 
+template = env.get_template("portfolio.html.jinja")
+with open("docs/portfolio.html", "w") as file:
+    file.write(template.render(site=site))
+
 # Render articles
 site = get_site("../")
 for article_template in scandir("templates/articles/"):
