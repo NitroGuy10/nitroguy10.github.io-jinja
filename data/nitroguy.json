@@ -28,6 +28,11 @@
             "link": "https://twitter.com/NitroGuy10",
             "icon": "icons/twitter.png"
         },
+        "musicTwitter": {
+            "type": "Twitter",
+            "link": "https://twitter.com/The_Sass_Music",
+            "icon": "icons/twitter.png"
+        },
         "newgrounds": {
             "type": "Newgrounds",
             "link": "https://thesassmusic.newgrounds.com",
