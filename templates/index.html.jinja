@@ -18,8 +18,8 @@
             id="aboutNavButton">About</button><noscript></a></noscript>
         <noscript><a href="#music"></noscript><button onclick="openTab(1)"
             id="musicNavButton">Music</button><noscript></a></noscript>
-        <noscript><a href="#other"></noscript><button onclick="openTab(2)"
-            id="otherNavButton">Other</button><noscript></a></noscript>
+        <noscript><a href="#projects"></noscript><button onclick="openTab(2)"
+            id="otherNavButton">Projects</button><noscript></a></noscript>
     </p>
     <div id="content">
         <div id="about">
@@ -110,13 +110,13 @@
     </noscript>
     <div id="other">
         <noscript>
-            <h2 class="noscript-heading">Other</h2>
+            <h2 class="noscript-heading">Projects</h2>
         </noscript>
         <p>I've made a bunch of cool software, plugins, webpages, and other projects which you can find on my <a
                 href="{{ site.nitroguy.socials.github.link }}">GitHub</a>. If you wanna hear my commentary about them,
             I've made this <a href="articles/projects.html">article</a>.</p>
         <p>If you're just looking for the highlights, here are some of them:</p>
-        <ul>
+        <ul id="projects-list">
             <li><a href="{{ site.nitroguy.socials.github.link }}/Vegas-Scripts">Plugins/Scripts for VEGAS Pro</a></li>
             <li><a href="{{ site.nitroguy.socials.github.link }}/ERS-OL">Online Egyptian Rat Screw game</a></li>
             <li><a href="articles/about_website.html">How this website was made</a> (it's more complex than you might think!)</li>
@@ -127,7 +127,7 @@
     {{ site.footer }}
 
     <script>
-        const TABS = ["#about", "#music", "#other"]
+        const TABS = ["#about", "#music", "#projects"]
 
         function openTab(page, start) {
             if (location.hash === TABS[page] && !start) {
