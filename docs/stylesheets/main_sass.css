@@ -81,6 +81,10 @@ a:link, a:visited {
 a.white-link {
   color: inherit;
 }
+a.unformatted-link {
+  color: inherit;
+  text-decoration: none;
+}
 
 .download {
   font-size: 30px;
