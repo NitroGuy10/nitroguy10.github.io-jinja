@@ -894,6 +894,30 @@
             }
          },
          "collection": "Remixes"
+      },
+      "Journey": {
+         "name": "Journey",
+         "description": "I'm back! This is another one that took over a year to finish. It's got a little bit of everything from a mixture of color bass and tearout in the drop, to a cinematic orchestral midsection, and some bouncy chiptune fun in the intro. Oh, and you bet there are lead solos for days!",
+         "releaseDate": "08/07/2022",
+         "genre": "Color Bass",
+         "coverLink": "Journey.png",
+         "downloadLinks": {
+            "mp3Link": {
+               "type": "mp3",
+               "link": "https://hypeddit.com/thesass/journey"
+            }
+         },
+         "streamLinks": {
+            "youtubeLink": {
+               "type": "YouTube",
+               "link": "https://youtu.be/CkOJxLu1x9Q"
+            },
+            "soundcloudLink": {
+               "type": "SoundCloud",
+               "link": "https://soundcloud.com/the-sass-music/journey"
+            }
+         },
+         "collection": "Singles"
       }
    }
 }

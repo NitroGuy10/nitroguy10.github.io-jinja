@@ -266,7 +266,8 @@ button.current {
     line-height: 22vw;
   }
   h1.long-name {
-    font-size: 17vw;
+    font-size: 9vw;
+    line-height: 17vw;
   }
   h1.music-name {
     font-size: 14vw;
