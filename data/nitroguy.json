@@ -37,6 +37,46 @@
             "type": "Newgrounds",
             "link": "https://thesassmusic.newgrounds.com",
             "icon": "icons/newgrounds.png"
+        },
+        "amazonMusic": {
+            "type": "Amazon Music",
+            "link": "about:blank",
+            "icon": "icons/amazon.png"
+        },
+        "appleMusic": {
+            "type": "Apple Music",
+            "link": "about:blank",
+            "icon": "icons/apple_music.png"
+        },
+        "deezer": {
+            "type": "Deezer",
+            "link": "about:blank",
+            "icon": "icons/deezer.png"
+        },
+        "iHeartRadio": {
+            "type": "iHeartRadio",
+            "link": "about:blank",
+            "icon": "icons/iheartradio.png"
+        },
+        "iTunes": {
+            "type": "iTunes",
+            "link": "about:blank",
+            "icon": "icons/itunes.png"
+        },
+        "pandora": {
+            "type": "Pandora",
+            "link": "about:blank",
+            "icon": "icons/pandora.png"
+        },
+        "spotify": {
+            "type": "Spotify",
+            "link": "about:blank",
+            "icon": "icons/spotify.png"
+        },
+        "tidal": {
+            "type": "Tidal",
+            "link": "about:blank",
+            "icon": "icons/tidal.png"
         }
     }
 }
