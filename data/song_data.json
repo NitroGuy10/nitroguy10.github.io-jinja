@@ -915,6 +915,38 @@
             "soundcloudLink": {
                "type": "SoundCloud",
                "link": "https://soundcloud.com/the-sass-music/journey"
+            },
+            "spotifyLink": {
+               "type": "Spotify",
+               "link": "about:blank"
+            },
+            "appleMusicLink": {
+               "type": "Apple Music",
+               "link": "about:blank"
+            },
+            "iTunesLink": {
+               "type": "iTunes",
+               "link": "about:blank"
+            },
+            "pandoraLink": {
+               "type": "Pandora",
+               "link": "about:blank"
+            },
+            "deezerLink": {
+               "type": "Deezer",
+               "link": "about:blank"
+            },
+            "tidalLink": {
+               "type": "Tidal",
+               "link": "about:blank"
+            },
+            "amazonMusicLink": {
+               "type": "Amazon Music",
+               "link": "about:blank"
+            },
+            "iHeartRadioLink": {
+               "type": "iHeartRadio",
+               "link": "about:blank"
             }
          },
          "collection": "Singles"

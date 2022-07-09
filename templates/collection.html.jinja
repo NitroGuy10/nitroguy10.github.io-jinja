@@ -34,10 +34,50 @@
                     class="social-icon-scale"><a href="{{ collection.streamLinks.soundcloudLink.link }}" class="collection-link"
                     target="_blank">SoundCloud</a></p>
             {% endif %}
+            {% if collection.streamLinks.spotifyLink is defined %}
+            <p class="collection-link"><img src="../{{ site.nitroguy.socials.spotify.icon }}" width="32" height="32"
+                    class="social-icon-scale"><a href="{{ collection.streamLinks.spotifyLink.link }}" class="collection-link"
+                    target="_blank">Spotify</a></p>
+            {% endif %}
+            {% if collection.streamLinks.appleMusicLink is defined %}
+            <p class="collection-link"><img src="../{{ site.nitroguy.socials.appleMusic.icon }}" width="32" height="32"
+                    class="social-icon-scale"><a href="{{ collection.streamLinks.appleMusicLink.link }}" class="collection-link"
+                    target="_blank">Apple Music</a></p>
+            {% endif %}
             {% if collection.streamLinks.newgroundsLink is defined %}
             <p class="collection-link"><img src="../{{ site.nitroguy.socials.newgrounds.icon }}" width="32" height="32"
                     class="social-icon-scale"><a href="{{ collection.streamLinks.newgroundsLink.link }}" class="collection-link"
                     target="_blank">Newgrounds</a></p>
+            {% endif %}
+            {% if collection.streamLinks.iTunesLink is defined %}
+            <p class="collection-link"><img src="../{{ site.nitroguy.socials.iTunes.icon }}" width="32" height="32"
+                    class="social-icon-scale"><a href="{{ collection.streamLinks.iTunesLink.link }}" class="collection-link"
+                    target="_blank">iTunes</a></p>
+            {% endif %}
+            {% if collection.streamLinks.pandoraLink is defined %}
+            <p class="collection-link"><img src="../{{ site.nitroguy.socials.pandora.icon }}" width="32" height="32"
+                    class="social-icon-scale"><a href="{{ collection.streamLinks.pandoraLink.link }}" class="collection-link"
+                    target="_blank">Pandora</a></p>
+            {% endif %}
+            {% if collection.streamLinks.deezerLink is defined %}
+            <p class="collection-link"><img src="../{{ site.nitroguy.socials.deezer.icon }}" width="32" height="32"
+                    class="social-icon-scale"><a href="{{ collection.streamLinks.deezerLink.link }}" class="collection-link"
+                    target="_blank">Deezer</a></p>
+            {% endif %}
+            {% if collection.streamLinks.tidalLink is defined %}
+            <p class="collection-link"><img src="../{{ site.nitroguy.socials.tidal.icon }}" width="32" height="32"
+                    class="social-icon-scale"><a href="{{ collection.streamLinks.tidalLink.link }}" class="collection-link"
+                    target="_blank">Tidal</a></p>
+            {% endif %}
+            {% if collection.streamLinks.amazonMusicLink is defined %}
+            <p class="collection-link"><img src="../{{ site.nitroguy.socials.amazonMusic.icon }}" width="32" height="32"
+                    class="social-icon-scale"><a href="{{ collection.streamLinks.amazonMusicLink.link }}" class="collection-link"
+                    target="_blank">Amazon Music</a></p>
+            {% endif %}
+            {% if collection.streamLinks.iHeartRadioLink is defined %}
+            <p class="collection-link"><img src="../{{ site.nitroguy.socials.iHeartRadio.icon }}" width="32" height="32"
+                    class="social-icon-scale"><a href="{{ collection.streamLinks.iHeartRadioLink.link }}" class="collection-link"
+                    target="_blank">iHeartRadio</a></p>
             {% endif %}
         </div>
         <div id="eachTrack">
