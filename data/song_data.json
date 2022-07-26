@@ -897,14 +897,14 @@
       },
       "Journey": {
          "name": "Journey",
-         "description": "I'm back! This is another one that took over a year to finish. It's got a little bit of everything from a mixture of color bass and tearout in the drop, to a cinematic orchestral midsection, and some bouncy chiptune fun in the intro. Oh, and you bet there are lead solos for days!",
+         "description": "I'm back! This is another one that took over a year to finish. It's got a little bit of everything from a play on color bass in the drop, to a cinematic orchestral midsection, and some bouncy chiptune fun in the intro. Oh, and you bet there are lead solos for days!",
          "releaseDate": "08/07/2022",
          "genre": "Color Bass",
          "coverLink": "Journey.png",
          "downloadLinks": {
             "mp3Link": {
                "type": "mp3",
-               "link": "https://hypeddit.com/thesass/journey"
+               "link": "https://hypeddit.com/track/wf20ws"
             }
          },
          "streamLinks": {
@@ -918,33 +918,36 @@
             },
             "spotifyLink": {
                "type": "Spotify",
-               "link": "about:blank"
+               "link": "https://play.spotify.com/album/4Oqyz8SWb2gilIpA5Vxo2N"
             },
             "appleMusicLink": {
+               "comingSoon": true,
                "type": "Apple Music",
                "link": "about:blank"
             },
             "iTunesLink": {
+               "comingSoon": true,
                "type": "iTunes",
                "link": "about:blank"
             },
             "pandoraLink": {
                "type": "Pandora",
-               "link": "about:blank"
+               "link": "https://www.pandora.com/artist/the-sass/journey-single/journey/TR3blrhxZhVvJ2K"
             },
             "deezerLink": {
                "type": "Deezer",
-               "link": "about:blank"
+               "link": "https://www.deezer.com/us/album/335629007"
             },
             "tidalLink": {
                "type": "Tidal",
-               "link": "about:blank"
+               "link": "https://listen.tidal.com/album/237760077/track/237760078"
             },
             "amazonMusicLink": {
-               "type": "Amazon Music",
-               "link": "about:blank"
+               "type": "Amazon",
+               "link": "https://www.amazon.com/dp/B0B6GNJP1W"
             },
             "iHeartRadioLink": {
+               "comingSoon": true,
                "type": "iHeartRadio",
                "link": "about:blank"
             }

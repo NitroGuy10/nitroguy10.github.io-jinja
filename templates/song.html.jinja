@@ -22,79 +22,44 @@
                         <p>{{ song.description }}</p>
                     </td>
                     <td id="song-desc-2" class="on-song-page">
-                        <p class="cover"><img src="../artwork/{{ song.coverLink }}" class="cover-image" width="250"
-                                height="250"></p>
+                        <p class="cover"><img src="../artwork/{{ song.coverLink }}" class="cover-image" width="250" height="250"></p>
                         <h3>Released: {{ song.releaseDateFormatted }}</h3>
                         <h3>Genre: {{ song.genre }}</h3>
-                        <h3>Collection: <a href="../collections/{{ song.safeCollection }}.html">{{ song.collection
-                                }}</a></h3>
+                        <h3>Collection: <a href="../collections/{{ song.safeCollection }}.html">{{ song.collection }}</a></h3>
                         <hr>
-                        <h3 class="download">Free Download: <p>
+                        <h3 class="download">Free Download:
+                            <p>
                                 {% for link in song.downloadLinks %}
-                                <a href="{{ song.downloadLinks[link].link }}" class="download-link" target="_blank">({{
-                                    song.downloadLinks[link].type }})</a>
+                                <a href="{{ song.downloadLinks[link].link }}" class="download-link" target="_blank">({{ song.downloadLinks[link].type }})</a>
                                 {% endfor %}
                             </p>
                         </h3>
                         <hr>
                         <h3>
-                            {% if song.streamLinks.youtubeLink is defined %}
-                            <p class="other-links"><img src="../{{ site.nitroguy.socials.youtube.icon }}" width="32" height="32"
-                                    class="social-icon-scale"><a href="{{ song.streamLinks.youtubeLink.link }}"
-                                    class="other-links" target="_blank">YouTube</a>
-                            </p>
-                            {% endif %}
-                            {% if song.streamLinks.soundcloudLink is defined %}
-                            <p class="other-links"><img src="../{{ site.nitroguy.socials.soundcloud.icon }}" width="32" height="32"
-                                    class="social-icon-scale"><a href="{{ song.streamLinks.soundcloudLink.link }}"
-                                    class="other-links" target="_blank">SoundCloud</a></p>
-                            {% endif %}
-                            {% if song.streamLinks.spotifyLink is defined %}
-                            <p class="other-links"><img src="../{{ site.nitroguy.socials.spotify.icon }}" width="32" height="32"
-                                    class="social-icon-scale"><a href="{{ song.streamLinks.spotifyLink.link }}"
-                                    class="other-links" target="_blank">Spotify</a></p>
-                            {% endif %}
-                            {% if song.streamLinks.appleMusicLink is defined %}
-                            <p class="other-links"><img src="../{{ site.nitroguy.socials.appleMusic.icon }}" width="32" height="32"
-                                    class="social-icon-scale"><a href="{{ song.streamLinks.appleMusicLink.link }}"
-                                    class="other-links" target="_blank">Apple Music</a></p>
-                            {% endif %}
-                            {% if song.streamLinks.newgroundsLink is defined %}
-                            <p class="other-links"><img src="../{{ site.nitroguy.socials.newgrounds.icon }}" width="32" height="32"
-                                    class="social-icon-scale"><a href="{{ song.streamLinks.newgroundsLink.link }}"
-                                    class="other-links" target="_blank">Newgrounds</a></p>
-                            {% endif %}
-                            {% if song.streamLinks.iTunesLink is defined %}
-                            <p class="other-links"><img src="../{{ site.nitroguy.socials.iTunes.icon }}" width="32" height="32"
-                                    class="social-icon-scale"><a href="{{ song.streamLinks.iTunesLink.link }}"
-                                    class="other-links" target="_blank">iTunes</a></p>
-                            {% endif %}
-                            {% if song.streamLinks.pandoraLink is defined %}
-                            <p class="other-links"><img src="../{{ site.nitroguy.socials.pandora.icon }}" width="32" height="32"
-                                    class="social-icon-scale"><a href="{{ song.streamLinks.pandoraLink.link }}"
-                                    class="other-links" target="_blank">Pandora</a></p>
-                            {% endif %}
-                            {% if song.streamLinks.deezerLink is defined %}
-                            <p class="other-links"><img src="../{{ site.nitroguy.socials.deezer.icon }}" width="32" height="32"
-                                    class="social-icon-scale"><a href="{{ song.streamLinks.deezerLink.link }}"
-                                    class="other-links" target="_blank">Deezer</a></p>
-                            {% endif %}
-                            {% if song.streamLinks.tidalLink is defined %}
-                            <p class="other-links"><img src="../{{ site.nitroguy.socials.tidal.icon }}" width="32" height="32"
-                                    class="social-icon-scale"><a href="{{ song.streamLinks.tidalLink.link }}"
-                                    class="other-links" target="_blank">Tidal</a></p>
-                            {% endif %}
-                            {% if song.streamLinks.amazonMusicLink is defined %}
-                            <p class="other-links"><img src="../{{ site.nitroguy.socials.amazonMusic.icon }}" width="32" height="32"
-                                    class="social-icon-scale"><a href="{{ song.streamLinks.amazonMusicLink.link }}"
-                                    class="other-links" target="_blank">Amazon Music</a></p>
-                            {% endif %}
-                            {% if song.streamLinks.iHeartRadioLink is defined %}
-                            <p class="other-links"><img src="../{{ site.nitroguy.socials.iHeartRadio.icon }}" width="32" height="32"
-                                    class="social-icon-scale"><a href="{{ song.streamLinks.iHeartRadioLink.link }}"
-                                    class="other-links" target="_blank">iHeartRadio</a></p>
-                            {% endif %}
-                        </h3>
+                            {% macro streamLink(streamLink, social) -%}
+                                {% if streamLink is defined %}
+                                <p class="other-links">
+                                    <img src="../{{ social.icon }}" width="32" height="32" class="social-icon-scale">
+                                    {% if streamLink.comingSoon is defined %}
+                                        <span class="other-links">Coming Soon!</span>
+                                    {% else %}
+                                        <a href="{{ streamLink.link }}" class="other-links" target="_blank">{{ streamLink.type }}</a>
+                                    {% endif %}
+                                </p>
+                                {% endif %}
+                            {%- endmacro %}
+
+                            {{ streamLink(song.streamLinks.youtubeLink, site.nitroguy.socials.youtube) }}
+                            {{ streamLink(song.streamLinks.soundcloudLink, site.nitroguy.socials.soundcloud) }}
+                            {{ streamLink(song.streamLinks.spotifyLink, site.nitroguy.socials.spotify) }}
+                            {{ streamLink(song.streamLinks.appleMusicLink, site.nitroguy.socials.appleMusic) }}
+                            {{ streamLink(song.streamLinks.newgroundsLink, site.nitroguy.socials.newgrounds) }}
+                            {{ streamLink(song.streamLinks.iTunesLink, site.nitroguy.socials.iTunes) }}
+                            {{ streamLink(song.streamLinks.pandoraLink, site.nitroguy.socials.pandora) }}
+                            {{ streamLink(song.streamLinks.deezerLink, site.nitroguy.socials.deezer) }}
+                            {{ streamLink(song.streamLinks.tidalLink, site.nitroguy.socials.tidal) }}
+                            {{ streamLink(song.streamLinks.amazonMusicLink, site.nitroguy.socials.amazonMusic) }}
+                            {{ streamLink(song.streamLinks.iHeartRadioLink, site.nitroguy.socials.iHeartRadio) }}
                         </h3>
                     </td>
                 </tr>

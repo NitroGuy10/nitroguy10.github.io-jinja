@@ -40,7 +40,6 @@
         },
         "amazonMusic": {
             "type": "Amazon Music",
-            "link": "about:blank",
             "icon": "icons/amazon.png"
         },
         "appleMusic": {
@@ -65,7 +64,7 @@
         },
         "pandora": {
             "type": "Pandora",
-            "link": "about:blank",
+            "link": "https://www.pandora.com/artist/the-sass/AR7xllXXmmfkdmq",
             "icon": "icons/pandora.png"
         },
         "spotify": {
@@ -75,7 +74,7 @@
         },
         "tidal": {
             "type": "Tidal",
-            "link": "about:blank",
+            "link": "https://listen.tidal.com/artist/4792143",
             "icon": "icons/tidal.png"
         }
     }
