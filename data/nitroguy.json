@@ -76,6 +76,11 @@
             "type": "Tidal",
             "link": "https://listen.tidal.com/artist/4792143",
             "icon": "icons/tidal.png"
+        },
+        "bandcamp": {
+            "type": "Bandcamp",
+            "link": "about:blank",
+            "icon": "icons/bandcamp.png"
         }
     }
 }

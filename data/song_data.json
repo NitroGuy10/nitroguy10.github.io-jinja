@@ -952,7 +952,73 @@
                "link": "about:blank"
             }
          },
-         "collection": "Singles"
+         "collection": "Singles",
+         "isrc": "QZPJ32182210"
+      },
+      "Fishcracks - Accusations (The Sass Remix)": {
+         "name": "Fishcracks - Accusations (The Sass Remix)",
+         "description": "A fun but melancholy remix in a UK dubstep-inspired style. I tried to step away from the crazy complex lead solos and frenzied arrangement I usually go for and I'm very happy I did. This one came together extremely quickly, and the result is a laid-back and emotional tune with a strong riff-based approach that I ended up really liking. Hope you enjoy!",
+         "releaseDate": "19/08/2022",
+         "genre": "Melodic Dubstep",
+         "coverLink": "Accusations_Remix.png",
+         "downloadLinks": {
+            "mp3Link": {
+               "type": "mp3",
+               "link": "https://hypeddit.com/z2kfr3"
+            }
+         },
+         "streamLinks": {
+            "youtubeLink": {
+               "type": "YouTube",
+               "link": "https://youtu.be/H01QPpkc52A"
+            },
+            "soundcloudLink": {
+               "type": "SoundCloud",
+               "link": "https://soundcloud.com/the-sass-music/fishcracks-accusations-the-sass-remix"
+            },
+            "spotifyLink": {
+               "comingSoon": true,
+               "type": "Spotify",
+               "link": "about:blank"
+            },
+            "appleMusicLink": {
+               "comingSoon": true,
+               "type": "Apple Music",
+               "link": "about:blank"
+            },
+            "iTunesLink": {
+               "comingSoon": true,
+               "type": "iTunes",
+               "link": "about:blank"
+            },
+            "pandoraLink": {
+               "comingSoon": true,
+               "type": "Pandora",
+               "link": "about:blank"
+            },
+            "deezerLink": {
+               "comingSoon": true,
+               "type": "Deezer",
+               "link": "about:blank"
+            },
+            "tidalLink": {
+               "comingSoon": true,
+               "type": "Tidal",
+               "link": "about:blank"
+            },
+            "amazonMusicLink": {
+               "comingSoon": true,
+               "type": "Amazon",
+               "link": "about:blank"
+            },
+            "bandcampLink": {
+               "type": "Bandcamp",
+               "link": "https://novatonecommunity.bandcamp.com/album/accusations-the-remixes"
+            }
+         },
+         "collection": "Remixes",
+         "isrc": "GBWUL2244611",
+         "recordLabel": "Novatone"
       }
    }
 }
