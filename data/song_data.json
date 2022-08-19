@@ -910,7 +910,8 @@
          "streamLinks": {
             "youtubeLink": {
                "type": "YouTube",
-               "link": "https://youtu.be/CkOJxLu1x9Q"
+               "link": "https://youtu.be/CkOJxLu1x9Q",
+               "link2": "https://youtu.be/H_-w6fVIXpg"
             },
             "soundcloudLink": {
                "type": "SoundCloud",
@@ -921,14 +922,8 @@
                "link": "https://play.spotify.com/album/4Oqyz8SWb2gilIpA5Vxo2N"
             },
             "appleMusicLink": {
-               "comingSoon": true,
                "type": "Apple Music",
-               "link": "about:blank"
-            },
-            "iTunesLink": {
-               "comingSoon": true,
-               "type": "iTunes",
-               "link": "about:blank"
+               "link": "https://music.apple.com/us/album/journey/1634512926?i=1634512927"
             },
             "pandoraLink": {
                "type": "Pandora",
@@ -947,9 +942,8 @@
                "link": "https://www.amazon.com/dp/B0B6GNJP1W"
             },
             "iHeartRadioLink": {
-               "comingSoon": true,
                "type": "iHeartRadio",
-               "link": "about:blank"
+               "link": "https://www.iheart.com/artist/the-sass-30060245/songs/journey-175490218/"
             }
          },
          "collection": "Singles",
@@ -970,50 +964,46 @@
          "streamLinks": {
             "youtubeLink": {
                "type": "YouTube",
-               "link": "https://youtu.be/H01QPpkc52A"
+               "link": "https://youtu.be/H01QPpkc52A",
+               "link2": "https://youtu.be/_szL52Sf18Q"
             },
             "soundcloudLink": {
                "type": "SoundCloud",
                "link": "https://soundcloud.com/the-sass-music/fishcracks-accusations-the-sass-remix"
             },
             "spotifyLink": {
-               "comingSoon": true,
                "type": "Spotify",
-               "link": "about:blank"
+               "link": "https://open.spotify.com/track/7dgAlra9RXRe1wGtG0GXyA?si=742e9f8be85743b5",
+               "link2": "https://open.spotify.com/track/17t0tkzIYBrxGmPyMGMsdx?si=81d1e95b5e434b6d"
             },
             "appleMusicLink": {
-               "comingSoon": true,
                "type": "Apple Music",
-               "link": "about:blank"
-            },
-            "iTunesLink": {
-               "comingSoon": true,
-               "type": "iTunes",
-               "link": "about:blank"
+               "link": "https://music.apple.com/us/album/accusations-the-sass-remix/1639221151?i=1639221153",
+               "link2": "https://music.apple.com/us/album/accusations-the-sass-remix/1639597075?i=1639597086"
             },
             "pandoraLink": {
-               "comingSoon": true,
                "type": "Pandora",
-               "link": "about:blank"
+               "link": "https://www.pandora.com/artist/fishcracks/accusations-the-remixes-single-explicit/accusations-the-sass-remix/TR6pdXXJJvkm36q",
+               "link2": "https://www.pandora.com/artist/fishcracks/orbit-20-the-remixes-vol-2-explicit/accusations-the-sass-remix/TRnZlwz7mptXXkk"
             },
             "deezerLink": {
-               "comingSoon": true,
                "type": "Deezer",
-               "link": "about:blank"
+               "link": "https://www.deezer.com/us/track/1860207367"
             },
             "tidalLink": {
-               "comingSoon": true,
                "type": "Tidal",
-               "link": "about:blank"
+               "link": "https://tidal.com/browse/track/242546592",
+               "link2": "https://tidal.com/browse/track/242339057"
             },
             "amazonMusicLink": {
-               "comingSoon": true,
                "type": "Amazon",
-               "link": "about:blank"
+               "link": "https://www.amazon.com/dp/B0B98XK79W",
+               "link2": "https://www.amazon.com/dp/B0B94Y8PC8"
             },
             "bandcampLink": {
                "type": "Bandcamp",
-               "link": "https://novatonecommunity.bandcamp.com/album/accusations-the-remixes"
+               "link": "https://novatonecommunity.bandcamp.com/track/accusations-the-sass-remix-2",
+               "link2": "https://novatonecommunity.bandcamp.com/track/accusations-the-sass-remix"
             }
          },
          "collection": "Remixes",
