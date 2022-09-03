@@ -69,7 +69,7 @@
         },
         "spotify": {
             "type": "Spotify",
-            "link": "about:blank",
+            "link": "https://open.spotify.com/artist/37Cyay5aidIqtrWkQei3cC",
             "icon": "icons/spotify.png"
         },
         "tidal": {
